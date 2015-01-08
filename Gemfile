@@ -34,6 +34,9 @@ end
 # for API Key secrecy
 gem 'figaro'
 
+# static pages handling
+gem 'high_voltage', '~> 2.2.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
