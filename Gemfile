@@ -31,9 +31,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
-# for API Key secrecy
-gem 'figaro'
-
 # static pages handling
 gem 'high_voltage', '~> 2.2.1'
 
