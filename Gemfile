@@ -37,6 +37,10 @@ gem 'figaro'
 # static pages handling
 gem 'high_voltage', '~> 2.2.1'
 
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
