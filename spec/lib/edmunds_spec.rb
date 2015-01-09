@@ -4,16 +4,42 @@ describe "self.list_of_auto_makes", vcr:true do
 
   before do
     VCR.use_cassette 'edmunds_makes' do
-      @makes = Edmunds.list_of_auto_makes(params:{ api_key:Rails.application.secrets.edmunds_api_key })
+      @all_makes = Edmunds.list_of_auto_makes(params:{ api_key:Rails.application.secrets.edmunds_api_key })
     end
   end
 
-  it "should return an array of strings" do
-    @makes.each { |make| expect(make).to be_a String }
+  context "without year" do
+
+    it "should return an array of strings" do
+      @all_makes.each { |make| expect(make).to be_a String }
+    end
+
+    it "should include 'Eagle'" do
+      expect(@all_makes).to include('Eagle')
+    end
   end
 
-  it "should include 'Acura'" do
-    expect(@makes).to include('Acura')
+  context "passing a year parameter" do
+    before do
+      VCR.use_cassette 'edmunds_makes_with_year' do
+        params = { params: { api_key:Rails.application.secrets.edmunds_api_key,
+                             year:2005 } }
+        @makes_from_2005 = Edmunds.list_of_auto_makes(params)
+      end
+    end
+
+    it "should not include non-current makes" do
+      expect(@makes_from_2005).to_not include('Eagle')
+    end
+
+    it "should include a current make from that year" do
+      expect(@makes_from_2005).to include('Honda')
+    end
+
+    it "should be a subset of @all_makes" do
+      expect(@makes_from_2005 - @all_makes).to be_empty
+      expect(@all_makes.length).to be > @makes_from_2005.length
+    end
   end
 
 end
