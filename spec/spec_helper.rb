@@ -14,6 +14,16 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+# configure vcr
+require 'vcr'
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'vcr/cassettes'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -37,6 +47,10 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
+
+  # Use VCR for stubbing
+  # deprecated
+  # config.extend VCR::RSpec::Macros
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
