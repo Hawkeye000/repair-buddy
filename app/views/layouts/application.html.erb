@@ -6,10 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<nav class="navbar navbar-default">
+</nav>
 <body>
-
-<%= yield %>
-<%= debug(params) if Rails.env.development? %>
-
+  <div class="container">
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 </body>
 </html>

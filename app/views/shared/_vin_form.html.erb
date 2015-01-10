@@ -1,0 +1,9 @@
+<div class="row">
+  <%= form_tag do %>
+    <div class="form-group">
+      <%= label_tag :vin, "Search by VIN", class:"sr-only" %>
+      <%= text_field_tag :vin, "", class:"form-control" %>
+    </div>
+    <%= submit_tag "Lookup Car by VIN", class:"btn btn-primary" %>
+  <% end %>
+</div>

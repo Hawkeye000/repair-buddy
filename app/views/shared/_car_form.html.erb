@@ -1,0 +1,15 @@
+<%= form_tag do %>
+  <div class="form-group col-lg-3">
+    <%= select_tag(:year, options_for_select((1975..DateTime.now.year).map { |y| y.to_s }.reverse), class:"form-control", prompt:"Select Year...") %>
+  </div>
+  <div class="form-group col-lg-3">
+    <%= select_tag(:make, options_for_select(Edmunds.list_of_auto_makes(
+        {params:{api_key:Rails.application.secrets.edmunds_api_key}})), class:"form-control", prompt:"Select Make...", disabled:true) %>
+  </div>
+  <div class="form-group col-lg-3">
+    <%= select_tag(:model, options_for_select(""), class:"form-control", prompt:"Select Model...", disabled:true) %>
+  </div>
+  <div class="form-group col-lg-3">
+    <%= select_tag(:trim, options_for_select(""), class:"form-control", prompt:"Select Trim...", disabled:true) %>
+  </div>
+<% end %>
