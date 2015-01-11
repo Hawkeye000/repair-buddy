@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "shared/car_form" do
+describe "car searching" do
 
   before do
     VCR.use_cassette('edmunds_makes_car_form') do
@@ -8,17 +8,25 @@ describe "shared/car_form" do
     end
   end
 
-  it "should have a select tag called 'Year'" do
-    expect(page).to have_css("select#year")
-  end
-  it "should have a select tag called 'Make' which is disabled" do
-    expect(page).to have_css("select#make[disabled=disabled]")
-  end
-  it "should have a select tag called 'Model' which is disabled" do
-    expect(page).to have_css('select#model[disabled=disabled]')
-  end
-  it "should have a select tag called 'Trim' which is disabled" do
-    expect(page).to have_css('select#trim[disabled=disabled]')
+  describe "Find by Parameters" do
+    it "should have a select tag called 'Year'" do
+      expect(page).to have_css("select#year")
+    end
+    it "should have a select tag called 'Make' which is disabled" do
+      expect(page).to have_css("select#make[disabled=disabled]")
+    end
+    it "should have a select tag called 'Model' which is disabled" do
+      expect(page).to have_css('select#model[disabled=disabled]')
+    end
+    it "should have a select tag called 'Trim' which is disabled" do
+      expect(page).to have_css('select#trim[disabled=disabled]')
+    end
+
+    it "should enable the select tag 'Make' after selecting a year", js:true do
+      select "2004", from:"year"
+      expect(page).to_not have_css('select#make[disabled=disabled]')
+    end
+
   end
 
   describe "lookup by VIN" do
@@ -43,6 +51,10 @@ describe "shared/car_form" do
       end
     end
 
+  end
+
+  after :each do |example|
+    save_and_open_page unless example.exception.nil?
   end
 
 end

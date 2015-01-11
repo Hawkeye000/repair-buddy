@@ -27,4 +27,15 @@ $(document).ready(function() {
     }
   });
 
+  $('select#year').change(function() {
+    $makeSelect = $('select#make');
+    if (/^\d{4}$/.test($(this).val())) {
+      $makeSelect.removeAttr("disabled");
+      $('select#make options:gt(0)').remove();
+    }
+    else {
+      $makeSelect.attr("disabled", "disabled");
+    }
+  });
+
 });
