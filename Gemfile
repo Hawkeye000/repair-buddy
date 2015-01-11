@@ -29,9 +29,11 @@ gem 'spring', group: :development
 gem 'webmock', group: :test
 
 # Use RSpec for test framework
+# Capybara with selenium for features
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'vcr'
 end
 

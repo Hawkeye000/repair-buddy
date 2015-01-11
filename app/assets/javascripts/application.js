@@ -15,3 +15,16 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+$(document).ready(function() {
+
+  $('input#vin').keyup(function() {
+    if ($(this).val().length === 17) {
+      $('#submit-vin').removeAttr("disabled");
+    }
+    else {
+      $('#submit-vin').attr("disabled", "disabled");
+    }
+  });
+
+});
