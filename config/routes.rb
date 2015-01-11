@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :edmunds_makes, only:[:index]
   resources :edmunds_models, only:[:index]
   resources :edmunds_styles, only:[:index]
