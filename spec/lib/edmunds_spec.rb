@@ -64,9 +64,9 @@ describe "self#list_of_auto_models", vcr:true do
   context "make name is one word" do
     before do
       VCR.use_cassette 'edmunds_models_2004_honda' do
-        @models_2004_honda = Edmunds.list_of_auto_models("Honda",params:
-            { api_key:Rails.application.secrets.edmunds_api_key,
-              year:2004 })
+        @models_2004_honda = Edmunds.list_of_auto_models("Honda",
+        params: { api_key:Rails.application.secrets.edmunds_api_key,
+                  year:2004 })
       end
     end
 

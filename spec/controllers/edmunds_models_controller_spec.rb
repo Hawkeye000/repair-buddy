@@ -7,7 +7,7 @@ RSpec.describe EdmundsModelsController, :type => :controller do
     context "with no year" do
       it "provides an empty array" do
         VCR.use_cassette('edmunds_models_nil_year_aston_martin') do
-          get :index, { model:"Aston Martin", format: :json }
+          get :index, { make:"Aston Martin", format: :json }
         end
         expect(JSON.parse(response.body)).to be_empty
       end
@@ -16,7 +16,7 @@ RSpec.describe EdmundsModelsController, :type => :controller do
     context "with a year" do
       it "provides a list of models" do
         VCR.use_cassette('edmunds_models_2012_aston_martin') do
-          get :index, {year:'2012', model:"Aston Martin", format: :json}
+          get :index, {year:'2012', make:"Aston Martin", format: :json}
         end
         expect(JSON.parse(response.body)).to include('DB9')
         expect(JSON.parse(response.body)).to_not be_empty

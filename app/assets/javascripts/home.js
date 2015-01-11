@@ -18,12 +18,6 @@ $(document).ready(function() {
       $makeSelect.removeAttr("disabled");
       $('select#make option:gt(0)').remove();
       var year = $('select#year').val();
-      /*
-      var newOptions = $.ajax({
-        dataType: 'json',
-        url: "/edmunds_makes",
-        data: ('year=' + year)
-      });*/
       $.getJSON(
         "/edmunds_makes.json?year="+year,
         function(data) {
@@ -34,6 +28,27 @@ $(document).ready(function() {
     }
     else {
       $makeSelect.attr("disabled", "disabled");
+    }
+  });
+
+  //enable the model selector after choosing a make
+  $('select#make').change(function() {
+    $modelSelect = $('select#model');
+    if (!/Select Model/.test($(this).val())) {
+      $modelSelect.removeAttr("disabled");
+      $('select#model option:gt(0)').remove();
+      var year = $('select#year').val();
+      var make = $('select#make').val();
+    $.getJSON(
+      "/edmunds_models.json?year="+year+"&make="+make,
+      function(data) {
+        $.each(data, function(key,value) {
+          $modelSelect.append($("<option></option>").attr("value", value).text(value));
+        });
+      });
+    }
+    else {
+      $modelSelect.attr("disabled", "disabled");
     }
   });
 

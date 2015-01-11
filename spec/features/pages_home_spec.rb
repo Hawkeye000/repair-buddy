@@ -34,6 +34,25 @@ describe "car searching", vcr:true do
         # count is actually 47, but includes the "select year"
         expect(page).to have_selector('select#make option', count:48)
       end
+
+      describe "selecting a make" do
+        before do
+          VCR.use_cassette('edmunds_models_2004_honda') do
+            select "Honda", from:"make"
+          end
+        end
+
+        it "should enable the select tag 'Model' after selecting a make", js:true do
+          expect(page).to_not have_css('select#model[disabled=disabled]')
+        end
+        it "should contain a list of selectables", js:true do
+          # count is actually 8, but includes the "select model"
+          expect(page).to have_selector('select#model option', count:9)
+        end
+        it "should contain the item 'Civic'", js:true do
+          expect(page).to have_css('select#model option', text:'Civic')
+        end
+      end
     end
 
   end
