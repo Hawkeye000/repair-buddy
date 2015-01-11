@@ -26,11 +26,10 @@ http_interactions:
       - Apache-Coyote/1.1
       Set-Cookie:
       - EnvironmentID=071908b224bb21ac2098d1eb6d6ab37a;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
-      - EnvironmentID=071908b224bb21ac2098d1eb6d6ab37a;Max-Age=180;Path=/;Version=1;Domain=.edmunds.com;
       X-Environment:
       - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-58.mashery.com
+      - prod-j-worker-us-east-1b-62.mashery.com
       X-Session:
       - 071908b224bb21ac2098d1eb6d6ab37a
       Content-Length:
@@ -52,5 +51,5 @@ http_interactions:
         Sports Edition 2dr Convertible (5.9L 12cyl 6A)","submodel":{"body":"Convertible","modelName":"DB9
         Convertible","niceName":"convertible"},"trim":"Volante Sports Edition"}]}'
     http_version: 
-  recorded_at: Sun, 11 Jan 2015 07:04:21 GMT
+  recorded_at: Sun, 11 Jan 2015 07:53:50 GMT
 recorded_with: VCR 2.9.3

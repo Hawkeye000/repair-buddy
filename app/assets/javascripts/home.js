@@ -39,13 +39,13 @@ $(document).ready(function() {
       $('select#model option:gt(0)').remove();
       var year = $('select#year').val();
       var make = $('select#make').val();
-    $.getJSON(
-      "/edmunds_models.json?year="+year+"&make="+make,
-      function(data) {
-        $.each(data, function(key,value) {
-          $modelSelect.append($("<option></option>").attr("value", value).text(value));
+      $.getJSON(
+        "/edmunds_models.json?year="+year+"&make="+make,
+        function(data) {
+          $.each(data, function(key,value) {
+            $modelSelect.append($("<option></option>").attr("value", value).text(value));
+          });
         });
-      });
     }
     else {
       $modelSelect.attr("disabled", "disabled");
@@ -57,6 +57,17 @@ $(document).ready(function() {
     $trimSelect = $('select#trim');
     if ($(this).val() != "") {
       $trimSelect.removeAttr("disabled");
+      $('select#trim option:gt(0)').remove();
+      var year = $('select#year').val();
+      var make = $('select#make').val();
+      var model = $('select#model').val();
+      $.getJSON(
+        "/edmunds_styles.json?year="+year+"&make="+make+"&model="+model,
+        function(data) {
+          $.each(data, function(key,value) {
+            $trimSelect.append($("<option></option>").attr("value", key).text(value));
+          });
+        });
     }
     else {
       $trimSelect.attr("disabled", "disabled");

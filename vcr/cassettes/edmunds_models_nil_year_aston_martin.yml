@@ -29,7 +29,7 @@ http_interactions:
       X-Environment:
       - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-54.mashery.com
+      - prod-j-worker-us-east-1e-74.mashery.com
       X-Session:
       - dad5644335ddf0f0dede129fff5d2d9f
       Content-Length:
@@ -40,5 +40,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":200001769,"name":"Aston Martin","niceName":"aston-martin","models":[]}'
     http_version: 
-  recorded_at: Sun, 11 Jan 2015 05:53:01 GMT
+  recorded_at: Sun, 11 Jan 2015 07:53:42 GMT
 recorded_with: VCR 2.9.3

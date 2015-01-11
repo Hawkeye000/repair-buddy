@@ -85,6 +85,13 @@ describe "car searching", vcr:true do
           it "should enable the select tag 'Trim'", js:true do
             expect(page).to_not have_css('select#trim[disabled=disabled]')
           end
+          it "should contain a list of selectables", js:true do
+            # count is actually 8, but includes the "select model"
+            expect(page).to have_selector('select#model option', count:9)
+          end
+          it "should contain a the item 'Hybrid 4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)'" do
+            expect(page).to have_css('select#trim option', text:'Hybrid 4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)')
+          end
 
         end
       end

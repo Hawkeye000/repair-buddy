@@ -29,7 +29,7 @@ http_interactions:
       X-Environment:
       - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-62.mashery.com
+      - prod-j-worker-us-east-1e-73.mashery.com
       X-Session:
       - 071908b224bb21ac2098d1eb6d6ab37a
       Content-Length:
@@ -40,5 +40,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":200001444,"name":"Honda","niceName":"honda","models":[{"id":"Honda_Accord","name":"Accord","niceName":"accord","years":[{"id":100503589,"year":2004}]},{"id":"Honda_CR_V","name":"CR-V","niceName":"cr-v","years":[{"id":100503591,"year":2004}]},{"id":"Honda_Civic","name":"Civic","niceName":"civic","years":[{"id":100503590,"year":2004}]},{"id":"Honda_Element","name":"Element","niceName":"element","years":[{"id":100503592,"year":2004}]},{"id":"Honda_Insight","name":"Insight","niceName":"insight","years":[{"id":100503593,"year":2004}]},{"id":"Honda_Odyssey","name":"Odyssey","niceName":"odyssey","years":[{"id":100503594,"year":2004}]},{"id":"Honda_Pilot","name":"Pilot","niceName":"pilot","years":[{"id":100503595,"year":2004}]},{"id":"Honda_S2000","name":"S2000","niceName":"s2000","years":[{"id":100503596,"year":2004}]}]}'
     http_version: 
-  recorded_at: Sun, 11 Jan 2015 05:53:38 GMT
+  recorded_at: Sun, 11 Jan 2015 07:53:44 GMT
 recorded_with: VCR 2.9.3
