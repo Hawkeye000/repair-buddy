@@ -1,11 +1,9 @@
 require 'rails_helper'
 
-describe "car searching" do
+describe "car searching", vcr:true do
 
   before do
-    VCR.use_cassette('edmunds_makes_car_form') do
-      visit '/'
-    end
+    visit '/'
   end
 
   describe "Find by Parameters" do
