@@ -61,19 +61,55 @@ end
 
 describe "self#list_of_auto_models", vcr:true do
 
-  before do
-    VCR.use_cassette 'edmunds_models_2004_honda' do
-      @models_2004_honda = Edmunds.list_of_auto_models("honda",params:
-          { api_key:Rails.application.secrets.edmunds_api_key,
-            year:2004 })
+  context "make name is one word" do
+    before do
+      VCR.use_cassette 'edmunds_models_2004_honda' do
+        @models_2004_honda = Edmunds.list_of_auto_models("Honda",params:
+            { api_key:Rails.application.secrets.edmunds_api_key,
+              year:2004 })
+      end
+    end
+
+    it "should return a list of models" do
+      expect(@models_2004_honda).to_not be_empty
+    end
+    it "should include 'Civic'" do
+      expect(@models_2004_honda).to include('Civic')
     end
   end
 
-  it "should return a list of models" do
-    expect(@models_2004_honda).to_not be_empty
+  context "model name is two words" do
+    before do
+      VCR.use_cassette 'edmunds_models_2004_aston_martin' do
+        @models_2012_aston_martin = Edmunds.list_of_auto_models("Aston Martin",params:
+            { api_key:Rails.application.secrets.edmunds_api_key,
+              year:2012 })
+      end
+    end
+
+    it "should return a list of models" do
+      expect(@models_2012_aston_martin).to_not be_empty
+    end
+    it "should include 'DB9'" do
+      expect(@models_2012_aston_martin).to include('DB9')
+    end
   end
-  it "should include 'Civic'" do
-    expect(@models_2004_honda).to include('Civic')
+
+  context "model name is two words in snake case" do
+    before do
+      VCR.use_cassette 'edmunds_models_2004_aston_martin' do
+        @models_2012_aston_martin = Edmunds.list_of_auto_models("aston_martin",params:
+            { api_key:Rails.application.secrets.edmunds_api_key,
+              year:2012 })
+      end
+    end
+
+    it "should return a list of models" do
+      expect(@models_2012_aston_martin).to_not be_empty
+    end
+    it "should include 'DB9'" do
+      expect(@models_2012_aston_martin).to include('DB9')
+    end
   end
 
 end

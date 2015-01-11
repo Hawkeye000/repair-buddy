@@ -10,7 +10,7 @@ module Edmunds
   end
 
   def self.list_of_auto_models(model_name, options)
-    raw_models = RestClient.get(BASE_URI + VEHICLE + "/#{model_name}", options)
+    raw_models = RestClient.get(BASE_URI + VEHICLE + "/#{model_name.gsub(' ', '_').underscore}", options)
     JSON.parse(raw_models)["models"].map { |x| x["name"] }
   end
 
