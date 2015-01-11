@@ -28,13 +28,6 @@ describe "car searching", vcr:true do
         end
       end
 
-      context "default reselected" do
-        before { select "Select Year...", from:"year" }
-        it "should disable the select tag 'Make'", js:true do
-          expect(page).to have_css('select#make[disabled=disabled]')
-        end
-      end
-
       it "should enable the select tag 'Make' after selecting a year", js:true do
         expect(page).to_not have_css('select#make[disabled=disabled]')
       end
@@ -43,17 +36,17 @@ describe "car searching", vcr:true do
         expect(page).to have_selector('select#make option', count:48)
       end
 
+      context "default reselected" do
+        before { select "Select Year...", from:"year" }
+        it "should disable the select tag 'Make'", js:true do
+          expect(page).to have_css('select#make[disabled=disabled]')
+        end
+      end
+
       describe "selecting a make" do
         before do
           VCR.use_cassette('edmunds_models_2004_honda') do
             select "Honda", from:"make"
-          end
-        end
-
-        context "default reselected" do
-          before { select "Select Make...", from:"make" }
-          it "should disable the select tag 'Model'", js:true do
-            expect(page).to have_css('select#model[disabled=disabled]')
           end
         end
 
@@ -68,17 +61,17 @@ describe "car searching", vcr:true do
           expect(page).to have_css('select#model option', text:'Civic')
         end
 
+        context "default reselected" do
+          before { select "Select Make...", from:"make" }
+          it "should disable the select tag 'Model'", js:true do
+            expect(page).to have_css('select#model[disabled=disabled]')
+          end
+        end
+
         describe "selecting a model" do
           before do
             VCR.use_cassette('edmunds_styles_2004_honda_civic') do
               select "Civic", from:"model"
-            end
-          end
-
-          context "default reselected" do
-            before { select "Select Model...", from:"model" }
-            it "should disable the select tag 'Trim'", js:true do
-              expect(page).to have_css('select#trim[disabled=disabled]')
             end
           end
 
@@ -89,8 +82,15 @@ describe "car searching", vcr:true do
             # count is actually 8, but includes the "select model"
             expect(page).to have_selector('select#model option', count:9)
           end
-          it "should contain a the item 'Hybrid 4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)'" do
+          it "should contain a the item 'Hybrid 4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)'", js:true do
             expect(page).to have_css('select#trim option', text:'Hybrid 4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)')
+          end
+
+          context "default reselected" do
+            before { select "Select Model...", from:"model" }
+            it "should disable the select tag 'Trim'", js:true do
+              expect(page).to have_css('select#trim[disabled=disabled]')
+            end
           end
 
         end
