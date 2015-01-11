@@ -15,27 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
-
-$(document).ready(function() {
-
-  $('input#vin').keyup(function() {
-    if ($(this).val().length === 17) {
-      $('#submit-vin').removeAttr("disabled");
-    }
-    else {
-      $('#submit-vin').attr("disabled", "disabled");
-    }
-  });
-
-  $('select#year').change(function() {
-    $makeSelect = $('select#make');
-    if (/^\d{4}$/.test($(this).val())) {
-      $makeSelect.removeAttr("disabled");
-      $('select#make options:gt(0)').remove();
-    }
-    else {
-      $makeSelect.attr("disabled", "disabled");
-    }
-  });
-
-});
