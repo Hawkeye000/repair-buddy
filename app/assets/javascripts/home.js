@@ -16,7 +16,21 @@ $(document).ready(function() {
     $makeSelect = $('select#make');
     if (/^\d{4}$/.test($(this).val())) {
       $makeSelect.removeAttr("disabled");
-      $('select#make options:gt(0)').remove();
+      $('select#make option:gt(0)').remove();
+      var year = $('select#year').val();
+      /*
+      var newOptions = $.ajax({
+        dataType: 'json',
+        url: "/edmunds_makes",
+        data: ('year=' + year)
+      });*/
+      $.getJSON(
+        "/edmunds_makes.json?year="+year,
+        function(data) {
+          $.each(data, function(key,value) {
+            $makeSelect.append($("<option></option>").attr("value", value).text(value));
+          });
+        });
     }
     else {
       $makeSelect.attr("disabled", "disabled");

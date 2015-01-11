@@ -22,9 +22,20 @@ describe "car searching" do
       expect(page).to have_css('select#trim[disabled=disabled]')
     end
 
-    it "should enable the select tag 'Make' after selecting a year", js:true do
-      select "2004", from:"year"
-      expect(page).to_not have_css('select#make[disabled=disabled]')
+    describe "selecting a year" do
+      before do
+        VCR.use_cassette('edmunds_makes_from_2004') do
+          select "2004", from:"year"
+        end
+      end
+
+      it "should enable the select tag 'Make' after selecting a year", js:true do
+        expect(page).to_not have_css('select#make[disabled=disabled]')
+      end
+      it "should contain a list of selectables", js:true do
+        # count is actually 47, but includes the "select year"
+        expect(page).to have_selector('select#make option', count:48)
+      end
     end
 
   end
