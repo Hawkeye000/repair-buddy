@@ -21,9 +21,17 @@ describe "car searching", vcr:true do
     end
 
     describe "selecting a year" do
+
       before do
         VCR.use_cassette('edmunds_makes_from_2004') do
           select "2004", from:"year"
+        end
+      end
+
+      context "default reselected" do
+        before { select "Select Year...", from:"year" }
+        it "should disable the select tag 'Make'", js:true do
+          expect(page).to have_css('select#make[disabled=disabled]')
         end
       end
 
@@ -39,6 +47,13 @@ describe "car searching", vcr:true do
         before do
           VCR.use_cassette('edmunds_models_2004_honda') do
             select "Honda", from:"make"
+          end
+        end
+
+        context "default reselected" do
+          before { select "Select Make...", from:"make" }
+          it "should disable the select tag 'Model'", js:true do
+            expect(page).to have_css('select#model[disabled=disabled]')
           end
         end
 

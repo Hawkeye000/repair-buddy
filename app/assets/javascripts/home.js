@@ -34,7 +34,7 @@ $(document).ready(function() {
   //enable the model selector after choosing a make
   $('select#make').change(function() {
     $modelSelect = $('select#model');
-    if (!/Select Model/.test($(this).val())) {
+    if ($(this).val() != "") {
       $modelSelect.removeAttr("disabled");
       $('select#model option:gt(0)').remove();
       var year = $('select#year').val();
