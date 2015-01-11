@@ -80,7 +80,7 @@ describe "self#list_of_auto_models", vcr:true do
 
   context "model name is two words" do
     before do
-      VCR.use_cassette 'edmunds_models_2004_aston_martin' do
+      VCR.use_cassette 'edmunds_models_2012_aston_martin' do
         @models_2012_aston_martin = Edmunds.list_of_auto_models("Aston Martin",params:
             { api_key:Rails.application.secrets.edmunds_api_key,
               year:2012 })
@@ -97,7 +97,7 @@ describe "self#list_of_auto_models", vcr:true do
 
   context "model name is two words in snake case" do
     before do
-      VCR.use_cassette 'edmunds_models_2004_aston_martin' do
+      VCR.use_cassette 'edmunds_models_2012_aston_martin' do
         @models_2012_aston_martin = Edmunds.list_of_auto_models("aston_martin",params:
             { api_key:Rails.application.secrets.edmunds_api_key,
               year:2012 })
