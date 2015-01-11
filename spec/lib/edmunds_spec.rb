@@ -21,9 +21,9 @@ describe "self.list_of_auto_makes", vcr:true do
 
   context "passing a year parameter" do
     before do
-      VCR.use_cassette 'edmunds_makes_with_year' do
+      VCR.use_cassette 'edmunds_makes_from_2004' do
         params = { params: { api_key:Rails.application.secrets.edmunds_api_key,
-                             year:2005 } }
+                             year:2004 } }
         @makes_from_2005 = Edmunds.list_of_auto_makes(params)
       end
     end
