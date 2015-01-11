@@ -1,0 +1,913 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.edmunds.com/api/vehicle/v2/honda/civic/?api_key=kjyydh5s5ee2bc8d648s68tx
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 11 Jan 2015 07:08:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - EnvironmentID=05a36da31f79f98266fad470f12ef82f;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
+      - EnvironmentID=05a36da31f79f98266fad470f12ef82f;Max-Age=180;Path=/;Version=1;Domain=.edmunds.com;
+      X-Environment:
+      - Prod-2
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1b-62.mashery.com
+      X-Session:
+      - 05a36da31f79f98266fad470f12ef82f
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"Honda_Civic","name":"Civic","niceName":"civic","years":[{"id":2148,"year":1990,"styles":[{"id":3884,"name":"4dr
+        Wagon","submodel":{"body":"Wagon","modelName":"Civic Wagon","niceName":"wagon"},"trim":"Base"},{"id":3885,"name":"4dr
+        Wagon 4WD","submodel":{"body":"Wagon","modelName":"Civic Wagon","niceName":"wagon"},"trim":"Base"},{"id":3881,"name":"Si
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":3883,"name":"2dr
+        Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Base"},{"id":3878,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":3872,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":3874,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":3870,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"}]},{"id":2149,"year":1991,"styles":[{"id":3918,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":3916,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":3921,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":3866,"name":"4dr
+        Wagon 4WD","submodel":{"body":"Wagon","modelName":"Civic Wagon","niceName":"wagon"},"trim":"Base"},{"id":3865,"name":"4dr
+        Wagon","submodel":{"body":"Wagon","modelName":"Civic Wagon","niceName":"wagon"},"trim":"Base"},{"id":3864,"name":"2dr
+        Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Base"},{"id":3862,"name":"Si
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":3857,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"}]},{"id":786,"year":1992,"styles":[{"id":3912,"name":"VX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"VX"},{"id":3904,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":3911,"name":"Si
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":3909,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":3900,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":3902,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":3898,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"}]},{"id":2150,"year":1993,"styles":[{"id":11562,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":11563,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":11560,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"},{"id":11566,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":11564,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":11568,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":11573,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":3891,"name":"VX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"VX"},{"id":3890,"name":"Si
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Si"}]},{"id":2151,"year":1994,"styles":[{"id":4115,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"},{"id":4117,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":4118,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":4120,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":4122,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":4124,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":11544,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":11547,"name":"VX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"VX"},{"id":11546,"name":"Si
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Si"}]},{"id":2152,"year":1995,"styles":[{"id":4096,"name":"VX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"VX"},{"id":4223,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":4220,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":4221,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":4218,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":4216,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"},{"id":4217,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":4232,"name":"Si
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":4229,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"}]},{"id":2153,"year":1996,"styles":[{"id":4259,"name":"HX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":4256,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":4261,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":4249,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":4248,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"},{"id":4251,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":4250,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":4253,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"}]},{"id":2154,"year":1997,"styles":[{"id":95,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":91,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":103,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":101,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"},{"id":109,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":118,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":114,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":688,"name":"HX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"}]},{"id":2155,"year":1998,"styles":[{"id":14555,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":14552,"name":"HX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":14549,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":14548,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":14547,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":14546,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":14545,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":14544,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"}]},{"id":3537,"year":1999,"styles":[{"id":11937,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":11925,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":11923,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"},{"id":11934,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":11932,"name":"HX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":11930,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":11928,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":6343,"name":"VP
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"VP"},{"id":3991,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":14361,"name":"Si
+        2dr Coupe","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"}]},{"id":1037,"year":2000,"styles":[{"id":3254,"name":"HX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":3255,"name":"EX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":3252,"name":"DX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"DX"},{"id":3253,"name":"DX
+        2dr Coupe","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":3256,"name":"Si
+        2dr Coupe","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":3262,"name":"CX
+        2dr Hatchback","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"CX"},{"id":3246,"name":"EX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":3245,"name":"LX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":3244,"name":"DX
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":948,"name":"VP
+        4dr Sedan","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"VP"}]},{"id":100000125,"year":2001,"styles":[{"id":100001241,"name":"EX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100001240,"name":"EX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100001243,"name":"EX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100001242,"name":"EX
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100001245,"name":"EX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100001244,"name":"EX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100001246,"name":"HX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100001233,"name":"DX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"DX"},{"id":100001232,"name":"DX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"DX"},{"id":100001235,"name":"DX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100001234,"name":"DX
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100001237,"name":"DX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"},{"id":100001236,"name":"DX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"},{"id":100001239,"name":"EX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100001238,"name":"EX
+        2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100001230,"name":"DX
+        2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100001231,"name":"DX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100001256,"name":"LX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100001257,"name":"LX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100001250,"name":"LX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100001251,"name":"LX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100001248,"name":"HX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100001254,"name":"LX 4dr Sedan
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100001255,"name":"LX
+        4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100001252,"name":"LX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100001253,"name":"LX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100002290,"name":"HX 2dr Coupe
+        (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100002289,"name":"HX
+        2dr Coupe w/Side Airbags (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"}]},{"id":100000404,"year":2002,"styles":[{"id":100075027,"name":"Si
+        2dr Hatchback (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100075133,"name":"GX
+        4dr Sedan w/Side Airbags and ABS (1.7L 4cyl CVT)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100075134,"name":"GX
+        4dr Sedan (1.7L 4cyl CVT)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100003229,"name":"DX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"},{"id":100003228,"name":"DX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100003231,"name":"EX
+        2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100003230,"name":"DX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"},{"id":100003225,"name":"DX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"DX"},{"id":100003224,"name":"DX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100003227,"name":"DX
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100003226,"name":"DX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"DX"},{"id":100003223,"name":"DX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100003246,"name":"LX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100003247,"name":"LX 4dr Sedan
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100003244,"name":"LX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100003245,"name":"LX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100003242,"name":"HX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100003243,"name":"LX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100003240,"name":"HX
+        2dr Coupe (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100003241,"name":"HX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100003238,"name":"EX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100003239,"name":"HX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100003236,"name":"EX
+        4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100003237,"name":"EX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100003234,"name":"EX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100003235,"name":"EX 4dr Sedan
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100003232,"name":"EX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100003233,"name":"EX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100003250,"name":"LX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100003249,"name":"LX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100003248,"name":"LX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100075514,"name":"Si
+        2dr Hatchback w/Side Airbags (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"}]},{"id":100502614,"year":2003,"styles":[{"id":100178467,"name":"DX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100178470,"name":"DX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"DX"},{"id":100178471,"name":"HX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100178468,"name":"DX
+        2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100178469,"name":"DX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"DX"},{"id":100178474,"name":"HX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100178475,"name":"LX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100178472,"name":"HX
+        2dr Coupe (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100178473,"name":"HX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100178478,"name":"LX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100178479,"name":"EX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100178476,"name":"LX
+        2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100178477,"name":"LX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100178483,"name":"DX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100178482,"name":"EX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100178481,"name":"EX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100178480,"name":"EX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100178487,"name":"LX
+        4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100178486,"name":"DX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"},{"id":100178485,"name":"DX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"},{"id":100178484,"name":"DX 4dr Sedan
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100178491,"name":"EX
+        4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100178490,"name":"LX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100178489,"name":"LX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100178488,"name":"LX 4dr Sedan
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100178495,"name":"Si
+        2dr Hatchback (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100178494,"name":"EX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100178493,"name":"EX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100178492,"name":"EX 4dr Sedan
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100178496,"name":"Si
+        2dr Hatchback w/Side Airbags (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100075664,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid 5M)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100075663,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100195842,"name":"GX 4dr
+        Sedan (1.7L 4cyl CVT)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100195843,"name":"GX
+        4dr Sedan w/Side Airbags and ABS (1.7L 4cyl CVT)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"GX"}]},{"id":100503590,"year":2004,"styles":[{"id":100374218,"name":"Si
+        2dr Hatchback (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100374219,"name":"Si
+        2dr Hatchback w/Side Airbags (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100344093,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100344092,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid 5M)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100344091,"name":"EX 2dr
+        Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344090,"name":"EX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344089,"name":"EX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344088,"name":"EX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344087,"name":"LX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344086,"name":"LX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344085,"name":"LX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344084,"name":"LX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344083,"name":"HX
+        2dr Coupe w/Side Airbags (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100344082,"name":"HX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100344081,"name":"HX 2dr Coupe
+        (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100344080,"name":"HX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100344078,"name":"Value
+        Package 2dr Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100344079,"name":"Value
+        Package 2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100344076,"name":"Value
+        Package 2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100344077,"name":"Value
+        Package 2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100344074,"name":"EX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344075,"name":"EX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344072,"name":"EX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344073,"name":"EX
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344070,"name":"LX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344071,"name":"LX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344068,"name":"LX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344069,"name":"LX
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344066,"name":"Value
+        Package 4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"Value Package"},{"id":100344067,"name":"Value
+        Package 4dr Sedan w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"Value Package"},{"id":100344064,"name":"DX
+        4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100344065,"name":"DX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"}]},{"id":100505002,"year":2005,"styles":[{"id":100469779,"name":"LX
+        4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100469781,"name":"LX
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100469780,"name":"LX
+        4dr Sedan w/Front Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100469783,"name":"LX 4dr Sedan
+        w/Front Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100469782,"name":"EX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100469791,"name":"EX
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100469790,"name":"EX
+        4dr Sedan w/Front Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100469768,"name":"Value Package
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"Value
+        Package"},{"id":100469769,"name":"Value Package 4dr Sedan w/Front side Airbags
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"Value
+        Package"},{"id":100469792,"name":"EX 4dr Sedan w/Front Side Airbags (1.7L
+        4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100513439,"name":"EX
+        Special Edition 4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX Special Edition"},{"id":100513438,"name":"EX
+        Special Edition 4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX Special Edition"},{"id":100467402,"name":"Value
+        Package 2dr Coupe w/Front Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100467372,"name":"Value
+        Package 2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100467370,"name":"Value
+        Package 2dr Coupe w/ Front Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100467369,"name":"Value
+        Package 2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"Value Package"},{"id":100474709,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid 5M)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100474723,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100474733,"name":"Si 2dr
+        Hatchback (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100474734,"name":"Si
+        2dr Hatchback w/Side Airbags (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100468262,"name":"HX
+        2dr Coupe (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100468263,"name":"HX
+        2dr Coupe w/Front Side Airbags (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100468261,"name":"HX 2dr Coupe
+        w/Front Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100468251,"name":"HX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100519762,"name":"GX
+        w/ABS 4dr Sedan (1.7L 4cyl CVT)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100519761,"name":"GX
+        4dr Sedan (1.7L 4cyl CVT)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100526209,"name":"LX
+        Special Edition 4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX Special Edition"},{"id":100468627,"name":"EX
+        Special Edition 2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX Special Edition"},{"id":100469590,"name":"DX
+        4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100468529,"name":"LX
+        2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100468536,"name":"LX
+        2dr Coupe w/Front Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100468539,"name":"EX 2dr Coupe
+        w/Front Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100468538,"name":"EX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100468513,"name":"LX
+        2dr Coupe w/Front Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100468508,"name":"LX 2dr Coupe
+        (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100468597,"name":"EX
+        Special Edition 2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX Special Edition"},{"id":100526192,"name":"LX
+        Special Edition 2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX Special Edition"},{"id":100526200,"name":"LX
+        Special Edition 4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX Special Edition"},{"id":100468574,"name":"EX
+        2dr Coupe w/Front Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100468558,"name":"EX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100526189,"name":"LX
+        Special Edition 2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX Special Edition"},{"id":100469656,"name":"DX
+        4dr Sedan w/Front Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"}]},{"id":100505525,"year":2006,"styles":[{"id":100742948,"name":"GX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100653377,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100653376,"name":"LX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100653379,"name":"EX
+        2dr Coupe w/Navigation System (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100653378,"name":"EX 2dr Coupe
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100653381,"name":"DX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100653380,"name":"EX
+        2dr Coupe w/Navigation System (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100653383,"name":"LX 4dr Sedan
+        (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100653382,"name":"DX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100653385,"name":"EX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100653384,"name":"LX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100653386,"name":"EX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100653389,"name":"EX
+        4dr Sedan w/Navigation System (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100653388,"name":"EX 4dr Sedan
+        w/Navigation System (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100653374,"name":"DX 2dr Coupe
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100653375,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100653373,"name":"DX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100677617,"name":"Si
+        2dr Coupe w/Summer Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100677616,"name":"Si 2dr Coupe (2.0L
+        4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":100677619,"name":"Si
+        2dr Coupe w/Navi, Summer Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100677618,"name":"Si 2dr Coupe w/Navi
+        (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100660627,"name":"Hybrid 4dr Sedan
+        (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100660632,"name":"Hybrid
+        4dr Sedan w/Navi (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"}]},{"id":100507585,"year":2007,"styles":[{"id":100809855,"name":"Si
+        2dr Coupe (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100809858,"name":"Si 2dr Coupe w/Navi,
+        Summer Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100809856,"name":"Si 2dr Coupe w/Summer
+        Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100809857,"name":"Si 2dr Coupe w/Navi
+        (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100822959,"name":"Si 4dr Sedan w/Summer
+        Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100822958,"name":"Si 4dr Sedan (2.0L
+        4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":100822978,"name":"Si
+        4dr Sedan w/Navi (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100804560,"name":"EX 4dr Sedan w/Navigation
+        System (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100804561,"name":"EX
+        4dr Sedan w/Navigation System (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100804549,"name":"LX 2dr Coupe
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100804548,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100804551,"name":"EX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100804550,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100814261,"name":"GX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100804547,"name":"DX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100804546,"name":"DX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100822999,"name":"Si
+        4dr Sedan w/Navi, Summer Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100804557,"name":"LX 4dr Sedan (1.8L
+        4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100804556,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100804559,"name":"EX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100804558,"name":"EX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100804553,"name":"EX
+        2dr Coupe w/Navigation System (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100804552,"name":"EX 2dr Coupe
+        w/Navigation System (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100804555,"name":"DX 4dr Sedan
+        (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100804554,"name":"DX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100825607,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100825608,"name":"Hybrid
+        4dr Sedan w/Navi (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"}]},{"id":100524174,"year":2008,"styles":[{"id":100933807,"name":"EX-L
+        2dr Coupe w/Navigation (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":100933806,"name":"EX-L 2dr
+        Coupe w/Navigation (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":100933805,"name":"EX-L 2dr
+        Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":100933804,"name":"EX-L
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":100933816,"name":"EX-L
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":100933810,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100933811,"name":"LX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":100933808,"name":"DX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100933809,"name":"DX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":100933814,"name":"EX
+        4dr Sedan w/Navigation (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100933815,"name":"EX 4dr Sedan
+        w/Navigation (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100933812,"name":"EX 4dr Sedan
+        (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100933813,"name":"EX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100933776,"name":"DX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100933777,"name":"DX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":100933778,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100933779,"name":"LX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100933780,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100933781,"name":"EX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100933782,"name":"EX
+        2dr Coupe w/Navigation (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100933783,"name":"EX 2dr Coupe
+        w/Navigation (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100933865,"name":"EX-L 4dr Sedan
+        w/Navigation (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":100933862,"name":"EX-L 4dr
+        Sedan w/Navigation (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":100933857,"name":"EX-L 4dr
+        Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":100943567,"name":"Hybrid
+        4dr Sedan w/Navigation (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100943566,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100943565,"name":"Si 4dr
+        Sedan w/Navigation, Summer Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100943564,"name":"Si 4dr Sedan w/Navigation
+        (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100943563,"name":"Si 4dr Sedan w/Summer
+        Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100943562,"name":"Si 4dr Sedan (2.0L
+        4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":100943569,"name":"GX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":100939792,"name":"Si
+        2dr Coupe w/Navigation, Summer Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100939789,"name":"Si 2dr Coupe (2.0L
+        4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":100939791,"name":"Si
+        2dr Coupe w/Nav (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100939790,"name":"Si 2dr Coupe w/Summer
+        Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":100954988,"name":"MUGEN Si 4dr Sedan
+        (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"MUGEN Si","modelName":"Civic
+        MUGEN Si","niceName":"mugen-si"},"trim":"MUGEN Si"}]},{"id":100526054,"year":2009,"styles":[{"id":101061140,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101061141,"name":"LX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101061142,"name":"LX-S
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX-S"},{"id":101061139,"name":"DX-VP
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX-VP"},{"id":101061148,"name":"EX
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":101061149,"name":"EX-L 4dr Sedan
+        (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101061150,"name":"EX-L
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101061151,"name":"EX-L
+        4dr Sedan w/Nav (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101061144,"name":"LX-S 4dr
+        Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX-S"},{"id":101061145,"name":"EX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101061146,"name":"EX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101061147,"name":"EX
+        4dr Sedan w/Nav (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":101061158,"name":"Hybrid 4dr
+        Sedan w/Nav (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101061157,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101061156,"name":"Si 4dr
+        Sedan w/Nav, High Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101061155,"name":"Si 4dr Sedan w/Nav
+        (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101061154,"name":"Si 4dr Sedan w/High
+        Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101061153,"name":"Si 4dr Sedan (2.0L
+        4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":101061152,"name":"EX-L
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101061166,"name":"Hybrid 4dr
+        Sedan w/Lthr (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101061182,"name":"GX 4dr
+        Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":101061181,"name":"Hybrid
+        4dr Sedan w/Lthr, Nav (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101061078,"name":"DX-VP
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX-VP"},{"id":101061077,"name":"DX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":101061076,"name":"DX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":101061072,"name":"Si
+        2dr Coupe w/Nav, High Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101061070,"name":"Si 2dr Coupe w/High
+        Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101061071,"name":"Si 2dr Coupe w/Nav
+        (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101061068,"name":"EX-L 2dr Coupe w/Nav
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101061069,"name":"Si
+        2dr Coupe (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101061066,"name":"EX-L 2dr Coupe (1.8L
+        4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101061067,"name":"EX-L
+        2dr Coupe w/Nav (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101061064,"name":"EX 2dr Coupe
+        w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101061065,"name":"EX-L
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101061062,"name":"EX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101061063,"name":"EX
+        2dr Coupe w/Nav (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":101061060,"name":"LX 2dr Coupe
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101061061,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101061058,"name":"DX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":101061059,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101061057,"name":"DX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"}]},{"id":100529531,"year":2010,"styles":[{"id":101209954,"name":"Si
+        4dr Sedan (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101209955,"name":"Si 4dr Sedan w/High
+        Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101209952,"name":"EX-L 4dr Sedan w/Nav
+        (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101209953,"name":"EX-L
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101209958,"name":"Hybrid 4dr
+        Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101209959,"name":"Hybrid
+        4dr Sedan w/Nav (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101209956,"name":"Si 4dr
+        Sedan w/Nav (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101209957,"name":"Si 4dr Sedan w/Nav,
+        High Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101209962,"name":"GX 4dr Sedan (1.8L
+        4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":101209960,"name":"Hybrid
+        4dr Sedan w/Lthr (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101209961,"name":"Hybrid
+        4dr Sedan w/Lthr, Nav (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101209937,"name":"Si 2dr
+        Coupe w/Nav, High Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101209936,"name":"Si 2dr Coupe w/Nav
+        (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101209939,"name":"DX 4dr Sedan (1.8L
+        4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":101209938,"name":"DX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":101209941,"name":"DX-VP
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX-VP"},{"id":101209940,"name":"DX-VP
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX-VP"},{"id":101209943,"name":"LX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101209942,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101209945,"name":"LX-S
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX-S"},{"id":101209944,"name":"LX-S
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX-S"},{"id":101209947,"name":"EX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101209946,"name":"EX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101209949,"name":"EX
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":101209948,"name":"EX 4dr Sedan
+        w/Nav (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101209951,"name":"EX-L
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101209950,"name":"EX-L
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101209922,"name":"DX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":101209923,"name":"DX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":101209924,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101209925,"name":"LX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101209926,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101209927,"name":"EX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101209928,"name":"EX
+        2dr Coupe w/Nav (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":101209929,"name":"EX 2dr Coupe
+        w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101209930,"name":"EX-L
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101209931,"name":"EX-L
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101209932,"name":"EX-L
+        2dr Coupe w/Nav (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101209933,"name":"EX-L 2dr
+        Coupe w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101209934,"name":"Si 2dr Coupe
+        (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101209935,"name":"Si 2dr Coupe w/High
+        Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"}]},{"id":100533309,"year":2011,"styles":[{"id":101358563,"name":"GX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"GX"},{"id":101357810,"name":"Si
+        2dr Coupe w/High Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101357811,"name":"Si 2dr Coupe w/Nav
+        (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101357808,"name":"EX-L 2dr Coupe w/Nav
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101357809,"name":"Si
+        2dr Coupe (2.0L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101357803,"name":"LX 2dr Coupe (1.8L
+        4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101357802,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101357807,"name":"EX-L
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101357806,"name":"EX
+        2dr Coupe w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":101357805,"name":"EX 2dr Coupe
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101357804,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101357795,"name":"DX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":101357796,"name":"DX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":101357838,"name":"LX-S
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX-S"},{"id":101357839,"name":"LX-S
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX-S"},{"id":101357836,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101357837,"name":"LX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101357834,"name":"DX-VP
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX-VP"},{"id":101357835,"name":"DX-VP
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX-VP"},{"id":101357832,"name":"DX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":101357833,"name":"DX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":101357847,"name":"Si
+        4dr Sedan w/Nav (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101357846,"name":"Si 4dr Sedan w/High
+        Performance Tires (2.0L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101357845,"name":"Si 4dr Sedan (2.0L
+        4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":101357844,"name":"EX-L
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101357843,"name":"EX-L 4dr
+        Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101357842,"name":"EX
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":101357841,"name":"EX 4dr Sedan
+        (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101357840,"name":"EX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101357851,"name":"Hybrid
+        4dr Sedan w/Lthr, Nav (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101357850,"name":"Hybrid
+        4dr Sedan w/Lthr (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101357849,"name":"Hybrid
+        4dr Sedan w/Nav (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101357848,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"}]},{"id":100529573,"year":2012,"styles":[{"id":101319404,"name":"DX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":101411654,"name":"Natural
+        Gas 4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"Natural
+        Gas"},{"id":101411644,"name":"Natural Gas 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"Natural
+        Gas"},{"id":101384830,"name":"Si 2dr Coupe w/Nav (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101384829,"name":"Si 2dr Coupe w/Summer
+        Tires (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101384828,"name":"Si 2dr Coupe (2.4L
+        4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic Si","niceName":"si"},"trim":"Si"},{"id":101384827,"name":"EX-L
+        2dr Coupe w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101384826,"name":"EX-L 2dr
+        Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":101384825,"name":"EX
+        2dr Coupe w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":101384824,"name":"EX 2dr Coupe
+        (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101384823,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":101384822,"name":"LX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101384821,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":101384820,"name":"DX
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"DX"},{"id":101384874,"name":"HF
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"HF"},{"id":101384879,"name":"Si
+        2dr Coupe w/Nav, Summer Tires (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101384848,"name":"LX 4dr Sedan (1.8L
+        4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101384849,"name":"LX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":101384851,"name":"EX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":101384852,"name":"EX
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":101384853,"name":"EX-L 4dr Sedan
+        (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101384854,"name":"EX-L
+        4dr Sedan w/Nav (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":101384855,"name":"Si 4dr Sedan
+        (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101384856,"name":"Si 4dr Sedan w/Summer
+        Tires (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101384857,"name":"Si 4dr Sedan w/Nav
+        (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":101384858,"name":"Hybrid 4dr Sedan
+        (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101384859,"name":"Hybrid
+        4dr Sedan w/Nav (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101384860,"name":"Hybrid
+        4dr Sedan w/Lthr (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101384861,"name":"Hybrid
+        4dr Sedan w/Lthr, Nav (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":101384847,"name":"DX 4dr
+        Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"},{"id":101213143,"name":"DX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"}]},{"id":200442557,"year":2013,"styles":[{"id":200696740,"name":"Natural
+        Gas 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"Natural Gas"},{"id":200696741,"name":"Natural
+        Gas w/Navigation 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"Natural
+        Gas w/Navigation"},{"id":200460763,"name":"Hybrid PZEV w/Leather 4dr Sedan
+        (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid PZEV w/Leather"},{"id":200460762,"name":"Hybrid
+        PZEV 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid PZEV"},{"id":200460761,"name":"Hybrid
+        w/Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Navigation"},{"id":200460760,"name":"Hybrid
+        w/Leather, Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Leather and Navigation"},{"id":200460765,"name":"Hybrid
+        PZEV w/Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid PZEV w/Navigation"},{"id":200460764,"name":"Hybrid
+        PZEV w/Leather, Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid PZEV w/Leather and Navigation"},{"id":200460755,"name":"Si
+        4dr Sedan (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":200460759,"name":"Hybrid w/Leather
+        4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Leather"},{"id":200460758,"name":"Hybrid
+        4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":200460757,"name":"Si w/Summer
+        Tires 4dr Sedan (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si w/Summer
+        Tires","modelName":"Civic Si w/Summer Tires","niceName":"si-wsummer-tires"},"trim":"Si
+        w/Summer Tires"},{"id":200460756,"name":"Si w/Navigation 4dr Sedan (2.4L 4cyl
+        6M)","submodel":{"body":"Sedan","tuner":"Si w/Navigation","modelName":"Civic
+        Si w/Navigation","niceName":"si-wnavigation"},"trim":"Si w/Navigation"},{"id":200460785,"name":"Si
+        w/Navigation and Summer Tires 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si
+        w/Navigation and Summer Tires","modelName":"Civic Si w/Navigation and Summer
+        Tires","niceName":"si-wnavigation-and-summer-tires"},"trim":"Si w/Navigation
+        and Summer Tires"},{"id":200460784,"name":"Si w/Navigation 2dr Coupe (2.4L
+        4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si w/Navigation","modelName":"Civic
+        Si w/Navigation","niceName":"si-wnavigation"},"trim":"Si w/Navigation"},{"id":200460786,"name":"Si
+        w/Summer Tires 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si
+        w/Summer Tires","modelName":"Civic Si w/Summer Tires","niceName":"si-wsummer-tires"},"trim":"Si
+        w/Summer Tires"},{"id":200460783,"name":"Si 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":200443454,"name":"EX-L PZEV 4dr Sedan
+        (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L
+        PZEV"},{"id":200443455,"name":"EX-L w/Navigation 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L w/Navigation"},{"id":200443452,"name":"EX
+        PZEV 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX PZEV"},{"id":200443453,"name":"EX w/Navigation
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX
+        w/Navigation"},{"id":200443450,"name":"EX-L PZEV w/Navigation 4dr Sedan (1.8L
+        4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L
+        PZEV w/Navigation"},{"id":200443451,"name":"LX PZEV 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX PZEV"},{"id":200443448,"name":"EX PZEV
+        w/Navigation 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX PZEV w/Navigation"},{"id":200443449,"name":"EX-L
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":200443446,"name":"EX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":200443447,"name":"LX
+        4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":200442558,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":200463193,"name":"HF
+        PZEV 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"HF PZEV"},{"id":200463192,"name":"HF 4dr
+        Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"HF"},{"id":200443846,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":200443847,"name":"LX
+        PZEV 2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX PZEV"},{"id":200443845,"name":"LX 2dr
+        Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":200443850,"name":"EX
+        PZEV 2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX PZEV"},{"id":200443851,"name":"EX w/Navigation
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX
+        w/Navigation"},{"id":200443848,"name":"EX 2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":200443849,"name":"EX 2dr Coupe
+        (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":200443854,"name":"EX-L
+        PZEV 2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L PZEV"},{"id":200443855,"name":"EX-L
+        w/Navigation 2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L w/Navigation"},{"id":200443852,"name":"EX
+        PZEV w/Navigation 2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX PZEV w/Navigation"},{"id":200443853,"name":"EX-L
+        2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":200443856,"name":"EX-L
+        PZEV w/Navigation 2dr Coupe (1.8L 4cyl 5A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L PZEV w/Navigation"}]},{"id":200498296,"year":2014,"styles":[{"id":200498298,"name":"EX-L
+        w/Navigation 4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L w/Navigation"},{"id":200498299,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":200498302,"name":"LX
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":200498303,"name":"HF
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"HF"},{"id":200498300,"name":"EX-L
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":200498301,"name":"EX
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":200498336,"name":"EX-L
+        2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":200498333,"name":"EX
+        2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":200498329,"name":"EX-L
+        w/Navigation 2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L w/Navigation"},{"id":200498326,"name":"LX
+        2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":200498322,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":200498319,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":200690298,"name":"Si
+        4dr Sedan (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":200690299,"name":"Si w/Summer Tires
+        4dr Sedan (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si w/Summer
+        Tires","modelName":"Civic Si w/Summer Tires","niceName":"si-wsummer-tires"},"trim":"Si
+        w/Summer Tires"},{"id":200690296,"name":"Si w/Navigation 2dr Coupe (2.4L 4cyl
+        6M)","submodel":{"body":"Coupe","tuner":"Si w/Navigation","modelName":"Civic
+        Si w/Navigation","niceName":"si-wnavigation"},"trim":"Si w/Navigation"},{"id":200690297,"name":"Si
+        w/Summer Tires 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si
+        w/Summer Tires","modelName":"Civic Si w/Summer Tires","niceName":"si-wsummer-tires"},"trim":"Si
+        w/Summer Tires"},{"id":200690300,"name":"Si w/Navigation 4dr Sedan (2.4L 4cyl
+        6M)","submodel":{"body":"Sedan","tuner":"Si w/Navigation","modelName":"Civic
+        Si w/Navigation","niceName":"si-wnavigation"},"trim":"Si w/Navigation"},{"id":200690290,"name":"Hybrid
+        w/Leather 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Leather"},{"id":200690291,"name":"Hybrid
+        4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":200690288,"name":"Hybrid
+        w/Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Navigation"},{"id":200690289,"name":"Hybrid
+        w/Leather and Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Leather and Navigation"},{"id":200690294,"name":"Si
+        2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":200690295,"name":"Si w/Navigation
+        and Summer Tires 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si
+        w/Navigation and Summer Tires","modelName":"Civic Si w/Navigation and Summer
+        Tires","niceName":"si-wnavigation-and-summer-tires"},"trim":"Si w/Navigation
+        and Summer Tires"},{"id":200690253,"name":"Natural Gas 4dr Sedan (1.8L 4cyl
+        5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic Natural
+        Gas","niceName":"natural-gas"},"trim":"Natural Gas"},{"id":200690252,"name":"Natural
+        Gas w/Leather and Navigation 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"Natural
+        Gas w/Leather and Navigation"}]},{"id":200714221,"year":2015,"styles":[{"id":200721621,"name":"Natural
+        Gas w/Leather and Navigation 4dr Sedan (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural
+        Gas","modelName":"Civic Natural Gas","niceName":"natural-gas"},"trim":"Natural
+        Gas w/Leather and Navigation"},{"id":200721620,"name":"Natural Gas 4dr Sedan
+        (1.8L 4cyl 5A)","submodel":{"body":"Sedan","fuel":"Natural Gas","modelName":"Civic
+        Natural Gas","niceName":"natural-gas"},"trim":"Natural Gas"},{"id":200720391,"name":"Hybrid
+        w/Leather 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Leather"},{"id":200720393,"name":"Hybrid
+        w/Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Navigation"},{"id":200720392,"name":"Hybrid
+        4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":200720394,"name":"Hybrid
+        w/Leather and Navigation 4dr Sedan (1.5L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid w/Leather and Navigation"},{"id":200714222,"name":"EX-L
+        w/Navigation 4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX-L w/Navigation"},{"id":200714223,"name":"LX
+        4dr Sedan (1.8L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":200714231,"name":"EX-L
+        w/Navigation 2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX-L w/Navigation"},{"id":200714230,"name":"LX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":200714229,"name":"EX
+        2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":200714228,"name":"SE
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"SE"},{"id":200714227,"name":"EX
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":200714226,"name":"EX-L
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX-L"},{"id":200714225,"name":"HF
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"HF"},{"id":200714224,"name":"LX
+        4dr Sedan (1.8L 4cyl CVT)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"LX"},{"id":200714234,"name":"EX
+        2dr Coupe (1.8L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":200714233,"name":"EX-L
+        2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX-L"},{"id":200714232,"name":"LX
+        2dr Coupe (1.8L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":200717037,"name":"Si
+        w/Navigation and Summer Tires 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si
+        w/Navigation and Summer Tires","modelName":"Civic Si w/Navigation and Summer
+        Tires","niceName":"si-wnavigation-and-summer-tires"},"trim":"Si w/Navigation
+        and Summer Tires"},{"id":200717036,"name":"Si 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"},{"id":200717033,"name":"Si w/Navigation
+        4dr Sedan (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si w/Navigation","modelName":"Civic
+        Si w/Navigation","niceName":"si-wnavigation"},"trim":"Si w/Navigation"},{"id":200717032,"name":"Si
+        w/Summer Tires 4dr Sedan (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si
+        w/Summer Tires","modelName":"Civic Si w/Summer Tires","niceName":"si-wsummer-tires"},"trim":"Si
+        w/Summer Tires"},{"id":200717035,"name":"Si w/Summer Tires 2dr Coupe (2.4L
+        4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si w/Summer Tires","modelName":"Civic
+        Si w/Summer Tires","niceName":"si-wsummer-tires"},"trim":"Si w/Summer Tires"},{"id":200717034,"name":"Si
+        w/Navigation 2dr Coupe (2.4L 4cyl 6M)","submodel":{"body":"Coupe","tuner":"Si
+        w/Navigation","modelName":"Civic Si w/Navigation","niceName":"si-wnavigation"},"trim":"Si
+        w/Navigation"},{"id":200717031,"name":"Si 4dr Sedan (2.4L 4cyl 6M)","submodel":{"body":"Sedan","tuner":"Si","modelName":"Civic
+        Si","niceName":"si"},"trim":"Si"}]}]}'
+    http_version: 
+  recorded_at: Sun, 11 Jan 2015 07:08:44 GMT
+recorded_with: VCR 2.9.3

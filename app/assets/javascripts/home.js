@@ -52,4 +52,15 @@ $(document).ready(function() {
     }
   });
 
+  //enable the trim selectro after choosing a model
+  $('select#model').change(function() {
+    $trimSelect = $('select#trim');
+    if ($(this).val() != "") {
+      $trimSelect.removeAttr("disabled");
+    }
+    else {
+      $trimSelect.attr("disabled", "disabled");
+    }
+  })
+
 });

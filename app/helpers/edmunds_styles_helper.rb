@@ -1,0 +1,2 @@
+module EdmundsStylesHelper
+end

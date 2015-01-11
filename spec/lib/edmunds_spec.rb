@@ -113,3 +113,17 @@ describe "self#list_of_auto_models", vcr:true do
   end
 
 end
+
+describe "self#list_of_auto_styles" do
+
+  it "should return a hash of IDs and style names" do
+    VCR.use_cassette 'edmunds_models_2012_aston_martin_db9' do
+      @models_2012_aston_martin_db9 = Edmunds.list_of_auto_styles(
+          "Aston Martin", "DB9", 2012, params:
+          { api_key:Rails.application.secrets.edmunds_api_key })
+    end
+    expect(@models_2012_aston_martin_db9).to be_a(Hash)
+    expect(@models_2012_aston_martin_db9.values).to include("Volante Luxury Edition 2dr Convertible (5.9L 12cyl 6A)")
+  end
+
+end

@@ -67,6 +67,26 @@ describe "car searching", vcr:true do
         it "should contain the item 'Civic'", js:true do
           expect(page).to have_css('select#model option', text:'Civic')
         end
+
+        describe "selecting a model" do
+          before do
+            VCR.use_cassette('edmunds_styles_2004_honda_civic') do
+              select "Civic", from:"model"
+            end
+          end
+
+          context "default reselected" do
+            before { select "Select Model...", from:"model" }
+            it "should disable the select tag 'Trim'", js:true do
+              expect(page).to have_css('select#trim[disabled=disabled]')
+            end
+          end
+
+          it "should enable the select tag 'Trim'", js:true do
+            expect(page).to_not have_css('select#trim[disabled=disabled]')
+          end
+
+        end
       end
     end
 
