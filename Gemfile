@@ -38,6 +38,10 @@ group :development, :test do
   gem 'vcr'
 end
 
+group :test do
+  gem 'shoulda-matchers', require: false
+end
+
 # use devise and pundit for auth&auth
 gem 'devise'
 gem 'pundit'
