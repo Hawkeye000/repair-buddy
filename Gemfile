@@ -38,6 +38,10 @@ group :development, :test do
   gem 'vcr'
 end
 
+# use devise and pundit for auth&auth
+gem 'devise'
+gem 'pundit'
+
 # static pages handling
 gem 'high_voltage', '~> 2.2.1'
 
