@@ -9,4 +9,9 @@ module Edmunds
     JSON.parse(raw_makes)["makes"].map { |x| x["name"] }
   end
 
+  def self.list_of_auto_models(model_name, options)
+    raw_models = RestClient.get(BASE_URI + VEHICLE + "/#{model_name}", options)
+    JSON.parse(raw_models)["models"].map { |x| x["name"] }
+  end
+
 end

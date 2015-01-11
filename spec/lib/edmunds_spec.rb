@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "self.list_of_auto_makes", vcr:true do
+describe "self#list_of_auto_makes", vcr:true do
 
   before do
     VCR.use_cassette 'edmunds_makes' do
@@ -55,6 +55,25 @@ describe "self.list_of_auto_makes", vcr:true do
     it "should return a blank list" do
       expect(@makes_from_blank).to be_empty
     end
+  end
+
+end
+
+describe "self#list_of_auto_models", vcr:true do
+
+  before do
+    VCR.use_cassette 'edmunds_models_2004_honda' do
+      @models_2004_honda = Edmunds.list_of_auto_models("honda",params:
+          { api_key:Rails.application.secrets.edmunds_api_key,
+            year:2004 })
+    end
+  end
+
+  it "should return a list of models" do
+    expect(@models_2004_honda).to_not be_empty
+  end
+  it "should include 'Civic'" do
+    expect(@models_2004_honda).to include('Civic')
   end
 
 end
