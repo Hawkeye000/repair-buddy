@@ -1,5 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe PartRecord, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to :part }
+  it { should belong_to :record }
 end
