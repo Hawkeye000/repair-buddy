@@ -6,6 +6,10 @@ RSpec.describe User, :type => :model do
     it { should have_many :cars }
     it { should have_many(:records).through(:cars) }
   end
-  
+
+  describe "validations" do
+    #it { should validate_presence_of :name }
+  end
+
   it { should respond_to :name }
 end
