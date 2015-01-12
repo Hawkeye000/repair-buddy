@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
   has_many :cars
   has_many :records, through: :cars
 
-  validates :name, presence:true
+  validates :name, presence:true, format: /\A[A-Z][a-z]* [A-Z][a-z]*/
 end
