@@ -18,4 +18,12 @@ RSpec.describe User, :type => :model do
   end
 
   it { should respond_to :name }
+
+  it "should have a valid factory" do
+    expect(build(:user)).to be_valid
+  end
+
+  it "should have an invalid factory" do
+    expect(build(:invalid_user)).to_not be_valid
+  end
 end
