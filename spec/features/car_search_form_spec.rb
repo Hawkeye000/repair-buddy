@@ -2,7 +2,11 @@ require 'rails_helper'
 
 describe "car searching with parameters", vcr:true do
 
-  before { visit '/' }
+  before do
+    user = create(:user)
+    login_as(user, scope: :user, :run_callbacks => false)
+    visit new_user_car_path(user)
+  end
 
   describe "Find by Parameters" do
     it "should have a select tag called 'Year'" do

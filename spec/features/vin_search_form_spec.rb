@@ -1,7 +1,12 @@
 require 'rails_helper'
 
 describe "lookup by VIN", vcr:true do
-  before { visit '/' }
+
+  before do
+    user = create(:user)
+    login_as(user, scope: :user, :run_callbacks => false)
+    visit new_user_car_path(user)
+  end
 
   it "should have a 'Lookup Car by VIN' button" do
     expect(page).to have_css('input.btn[value="Lookup Car by VIN"]')
