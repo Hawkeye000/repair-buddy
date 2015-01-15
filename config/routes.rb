@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  resources :users, only:[:show]
+
   resources :edmunds_makes, only:[:index]
   resources :edmunds_models, only:[:index]
   resources :edmunds_styles, only:[:index]
+
+  namespace :users do
+    resources :cars
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

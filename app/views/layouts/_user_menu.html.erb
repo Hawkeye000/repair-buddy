@@ -1,5 +1,5 @@
 <div class="btn-group" style="align:right;">
-  <%= current_user ? link_to("Profile", "#", class:"btn btn-default") :
+  <%= current_user ? link_to("Profile", user_path(current_user), class:"btn btn-default") :
       link_to("Login", new_user_session_path, class:"btn btn-default") %>
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     <span class="caret"></span>

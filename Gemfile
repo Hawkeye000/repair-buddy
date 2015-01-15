@@ -41,6 +41,7 @@ end
 
 group :test do
   gem 'shoulda-matchers', require: false
+  gem 'launchy', require: false
 end
 
 # use devise and pundit for auth&auth

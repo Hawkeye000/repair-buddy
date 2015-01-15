@@ -5,6 +5,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'shoulda/matchers'
 require 'capybara/rails'
+require 'devise'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -26,6 +27,8 @@ require 'capybara/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 Capybara.javascript_driver = :webkit
+include Warden::Test::Helpers
+Warden.test_mode!
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
@@ -33,6 +36,9 @@ RSpec.configure do |config|
 
   # Use factories for making models
   config.include FactoryGirl::Syntax::Methods
+
+  # Include utilities for testing devise
+  config.include Devise::TestHelpers, :type => :controller
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

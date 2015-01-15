@@ -21,18 +21,11 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 14 Jan 2015 00:26:04 GMT
+      - Thu, 15 Jan 2015 02:01:40 GMT
       Server:
       - Apache-Coyote/1.1
-      Set-Cookie:
-      - EnvironmentID=5b780143e5171833995c97931f48a00e;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
-      - EnvironmentID=5b780143e5171833995c97931f48a00e;Max-Age=180;Path=/;Version=1;Domain=.edmunds.com;
-      X-Environment:
-      - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-67.mashery.com
-      X-Session:
-      - 5b780143e5171833995c97931f48a00e
+      - prod-j-worker-us-east-1b-56.mashery.com
       Content-Length:
       - '4971'
       Connection:
@@ -93,7 +86,7 @@ http_interactions:
         2dr Hatchback w/Side Airbags (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
         Hatchback","niceName":"hatchback"},"trim":"Si"}]}'
     http_version: 
-  recorded_at: Tue, 13 Jan 2015 04:29:11 GMT
+  recorded_at: Thu, 15 Jan 2015 02:13:51 GMT
 - request:
     method: get
     uri: https://api.edmunds.com/api/vehicle/v2/honda/civic/2004?api_key=kjyydh5s5ee2bc8d648s68tx
@@ -119,7 +112,7 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-52.mashery.com
+      - prod-j-worker-us-east-1d-69.mashery.com
       Content-Length:
       - '4971'
       Connection:
@@ -180,5 +173,5 @@ http_interactions:
         2dr Hatchback w/Side Airbags (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
         Hatchback","niceName":"hatchback"},"trim":"Si"}]}'
     http_version: 
-  recorded_at: Thu, 15 Jan 2015 02:21:22 GMT
+  recorded_at: Thu, 15 Jan 2015 02:24:32 GMT
 recorded_with: VCR 2.9.3
