@@ -108,4 +108,90 @@ http_interactions:
         Beetle","niceName":"new-beetle","years":[{"id":100503323,"year":2004}]},{"id":"Volkswagen_Passat","name":"Passat","niceName":"passat","years":[{"id":100503324,"year":2004}]},{"id":"Volkswagen_Phaeton","name":"Phaeton","niceName":"phaeton","years":[{"id":100502680,"year":2004}]},{"id":"Volkswagen_R32","name":"R32","niceName":"r32","years":[{"id":100502982,"year":2004}]},{"id":"Volkswagen_Touareg","name":"Touareg","niceName":"touareg","years":[{"id":100502679,"year":2004}]}]},{"id":200010382,"name":"Volvo","niceName":"volvo","models":[{"id":"Volvo_C70","name":"C70","niceName":"c70","years":[{"id":100503229,"year":2004}]},{"id":"Volvo_S40","name":"S40","niceName":"s40","years":[{"id":100502996,"year":2004}]},{"id":"Volvo_S60","name":"S60","niceName":"s60","years":[{"id":100502955,"year":2004}]},{"id":"Volvo_S80","name":"S80","niceName":"s80","years":[{"id":100503231,"year":2004}]},{"id":"Volvo_V40","name":"V40","niceName":"v40","years":[{"id":100503230,"year":2004}]},{"id":"Volvo_V70","name":"V70","niceName":"v70","years":[{"id":100502956,"year":2004}]},{"id":"Volvo_XC70","name":"XC70","niceName":"xc70","years":[{"id":100503227,"year":2004}]},{"id":"Volvo_XC90","name":"XC90","niceName":"xc90","years":[{"id":100503228,"year":2004}]}]}],"makesCount":47}'
     http_version: 
   recorded_at: Thu, 15 Jan 2015 02:19:19 GMT
+- request:
+    method: get
+    uri: https://api.edmunds.com/api/vehicle/v2/makes?api_key=&year=2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/javascript
+      Date:
+      - Mon, 19 Jan 2015 23:52:28 GMT
+      Server:
+      - Mashery Proxy
+      X-Mashery-Error-Code:
+      - ERR_403_DEVELOPER_INACTIVE
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-73.mashery.com
+      Content-Length:
+      - '150'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+           "status":"FORBIDDEN",
+           "errorType":"AUTHENTICATION_ERROR",
+           "message":"Developer Inactive",
+           "moreInfoUrl":"http://developer.edmunds.com"
+        }
+    http_version: 
+  recorded_at: Mon, 19 Jan 2015 06:55:21 GMT
+- request:
+    method: get
+    uri: https://api.edmunds.com/api/vehicle/v2/makes?api_key=&year=2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/javascript
+      Date:
+      - Mon, 19 Jan 2015 23:52:50 GMT
+      Server:
+      - Mashery Proxy
+      X-Mashery-Error-Code:
+      - ERR_403_DEVELOPER_INACTIVE
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-78.mashery.com
+      Content-Length:
+      - '150'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+           "status":"FORBIDDEN",
+           "errorType":"AUTHENTICATION_ERROR",
+           "message":"Developer Inactive",
+           "moreInfoUrl":"http://developer.edmunds.com"
+        }
+    http_version: 
+  recorded_at: Mon, 19 Jan 2015 06:55:43 GMT
 recorded_with: VCR 2.9.3
