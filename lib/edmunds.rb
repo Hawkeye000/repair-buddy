@@ -23,4 +23,16 @@ module Edmunds
     styles.map { |x| [x["id"], x["name"]] }.to_h unless styles.nil?
   end
 
+  def self.car_lookup_by_vin(vin="", options)
+    raw_car_data = RestClient.get(BASE_URI + VEHICLE + "/vins/#{vin}", options)
+    car_data = JSON.parse(raw_car_data)
+    car_data_h = {
+      :make => car_data["make"]["name"],
+      :model => car_data["model"]["name"],
+      :year => car_data["years"].first["year"],
+      :trim => car_data["years"].first["styles"].first["name"],
+      :edmunds_id => car_data["years"].first["styles"].first["id"]
+    }
+  end
+
 end
