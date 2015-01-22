@@ -1,11 +1,29 @@
 <div class="row">
-  <%= form_tag do %>
+  <%= form_tag edmunds_vin_path, remote:true, method: :get do %>
     <div class="form-group col-lg-3">
       <%= label_tag :vin, "Search by VIN", class:"sr-only" %>
       <%= text_field_tag :vin, "", class:"form-control" %>
     </div>
     <div class="col-lg-3">
-      <%= submit_tag "Lookup Car by VIN", class:"btn btn-primary", id:"submit-vin", disabled:true %>
+      <%= submit_tag "Lookup Car by VIN", class:"btn btn-primary", id:"submit-vin", disabled:true, disable_with:"Searching..." %>
     </div>
   <% end %>
+</div>
+<div id="vin_info" class="row" style="display:none;">
+  <div class="col-lg-1">
+    <div class="row" style="font-weight:bold;">Year</div>
+    <div class="row" id="vin_year"></div>
+  </div>
+  <div class="col-lg-2">
+    <div class="row" style="font-weight:bold;">Make</div>
+    <div class="row" id="vin_make"></div>
+  </div>
+  <div class="col-lg-2">
+    <div class="row" style="font-weight:bold;">Model</div>
+    <div class="row" id="vin_model"></div>
+  </div>
+  <div class="col-lg-3">
+    <div class="row" style="font-weight:bold;">Trim</div>
+    <div class="row" id="vin_trim"></div>
+  </div>
 </div>

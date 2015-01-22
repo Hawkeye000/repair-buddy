@@ -29,4 +29,17 @@ describe "lookup by VIN", vcr:true do
     end
   end
 
+  describe "clicking the 'Lookup' button" do
+    it "should make an ajax request and render the result", js:true do
+      VCR.use_cassette('lookup_camaro_by_vin') do
+        fill_in "vin", with:'2G1FC3D33C9165616'
+        click_button 'Lookup Car by VIN'
+      end
+      expect(page).to have_content('Chevrolet')
+      expect(page).to have_content('Camaro')
+      expect(page).to have_content('2012')
+      expect(page).to have_content('LT 2dr Convertible w/2LT (3.6L 6cyl 6M)')
+    end
+  end
+
 end

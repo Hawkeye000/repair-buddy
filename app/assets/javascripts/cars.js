@@ -1,8 +1,10 @@
+
+
 $(document).ready(function() {
 
   //check input to the vin text and enable the submit
   //once the number of characters equals 17
-  $('input#vin').keyup(function() {
+  $('input#vin').on("keyup change", function() {
     if ($(this).val().length === 17) {
       $('#submit-vin').removeAttr("disabled");
     }
@@ -72,6 +74,16 @@ $(document).ready(function() {
     else {
       $trimSelect.attr("disabled", "disabled");
     }
-  })
+  });
 
+});
+
+$(document).ajaxSuccess(function(event, xhr, settings) {
+  if (settings.url.indexOf('/edmunds_vin') > -1) {
+    $('#vin_info').css("display", "block")
+    $('#vin_make').text(xhr.responseJSON.make);
+    $('#vin_model').text(xhr.responseJSON.model);
+    $('#vin_year').text(xhr.responseJSON.year);
+    $('#vin_trim').text(xhr.responseJSON.trim);
+  }
 });
