@@ -26,6 +26,9 @@ describe "home page" do
     it "should have a link to 'Add Car'" do
       expect(page).to have_link("Add Car", href:new_user_car_path(user))
     end
+    it "should have a link to 'Logout'" do
+      expect(page).to have_link("Logout", href:destroy_user_session_path)
+    end
   end
 
   after do |example|
