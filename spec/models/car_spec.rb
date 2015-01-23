@@ -21,4 +21,13 @@ RSpec.describe Car, :type => :model do
       it { should allow_value(2004).for(:year) }
     end
   end
+
+  describe "factories" do
+    it "should have a valid factory" do
+      expect(build(:car)).to be_valid
+    end
+    it "should have an invalid factory" do
+      expect(build(:invalid_car)).to_not be_valid
+    end
+  end
 end

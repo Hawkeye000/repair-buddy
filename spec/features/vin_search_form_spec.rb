@@ -18,14 +18,14 @@ describe "lookup by VIN", vcr:true do
 
   context "less than 17 characters in the VIN text box" do
     it "should have the button blocked out" do
-      expect(page).to have_css('input.btn[disabled=disabled]')
+      expect(page).to have_css('input#submit-vin[disabled=disabled]')
     end
   end
 
   context "equal to 17 characters in the VIN text box" do
     it "should enable the button", js:true do
-      fill_in "vin", with:"a"*17
-      expect(page).to_not have_css('input.btn[disabled=disabled]')
+      fill_in "vin", with:'2G1FC3D33C9165616'
+      expect(page).to_not have_css('input#submit-vin[disabled=disabled]')
     end
   end
 
@@ -39,6 +39,12 @@ describe "lookup by VIN", vcr:true do
       expect(page).to have_content('Camaro')
       expect(page).to have_content('2012')
       expect(page).to have_content('LT 2dr Convertible w/2LT (3.6L 6cyl 6M)')
+    end
+  end
+
+  after do |example|
+    if example.exception != nil
+      save_and_open_page
     end
   end
 

@@ -13,4 +13,17 @@ FactoryGirl.define do
     password "password"
     password_confirmation "password"
   end
+
+  factory :car do
+    edmunds_id 100344072
+    make "Honda"
+    model "Civic"
+    year 2004
+    trim "EX 4dr Sedan (1.7L 4cyl 5M)"
+    user_id 1
+  end
+
+  factory :invalid_car, parent: :car do
+    trim ""
+  end
 end
