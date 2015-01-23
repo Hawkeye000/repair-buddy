@@ -95,7 +95,26 @@ describe "car searching with parameters", vcr:true do
             end
           end
 
+          describe "selecting a trim" do
+            before do
+              VCR.use_cassette('edmunds_styles_2004_honda_civic_with_trim') do
+                select "EX 4dr Sedan (1.7L 4cyl 5M)", from:"trim"
+              end
+            end
+            it "should enable the 'add-to-garage' button", js:true do
+              expect(page).to_not have_css('#add-to-garage[disabled=disabled]')
+            end
+
+            context "default reslected" do
+              before { select "Select Trim...", from:"trim" }
+              it "should disable the add-to-garage button", js:true do
+                expect(page).to have_css('#add-to-garage[disabled=disabled]')
+              end
+            end
+          end
+
         end
+
       end
     end
 

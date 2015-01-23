@@ -54,7 +54,7 @@ $(document).ready(function() {
     }
   });
 
-  //enable the trim selectro after choosing a model
+  //enable the trim selector after choosing a model
   $('select#model').change(function() {
     $trimSelect = $('select#trim');
     if ($(this).val() != "") {
@@ -73,6 +73,16 @@ $(document).ready(function() {
     }
     else {
       $trimSelect.attr("disabled", "disabled");
+    }
+  });
+
+  //enable the submit button after choosing a trim
+  $('select#trim').change(function() {
+    if ($(this).val() === "") {
+      $('#add-to-garage').attr('disabled', 'disabled');
+    }
+    else {
+      $('#add-to-garage').removeAttr("disabled");
     }
   });
 
