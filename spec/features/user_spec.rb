@@ -18,6 +18,26 @@ describe 'Signing up new Users' do
 
   end
 
+  context "user is signed in" do
+    let(:user) { create(:user) }
+
+    xit "allows adding cars to the 'garage'", js:true do
+      login_as user
+      visit new_user_car_path(user.id)
+      VCR.use_cassette('user_filling_car_search_form') do
+        within('#new_car') {
+          select "2004", from:"car_year"
+          select "Honda", from:"car_make"
+          select "Civic", from:"car_model"
+          select "EX 4dr Sedan (1.7L 4cyl 5M)", from:"car_trim"
+        }
+      end
+      expect {
+        click_button "Add Car to Garage"
+      }.to change(Car, :count).by(1)
+    end
+  end
+
   after do |example|
     if example.exception != nil
       save_and_open_page

@@ -14,12 +14,12 @@ $(document).ready(function() {
   });
 
   //enable the make selector after choosing a year
-  $('select#year').change(function() {
-    $makeSelect = $('select#make');
+  $('select#car_year').change(function() {
+    $makeSelect = $('select#car_make');
     if (/^\d{4}$/.test($(this).val())) {
       $makeSelect.removeAttr("disabled");
-      $('select#make option:gt(0)').remove();
-      var year = $('select#year').val();
+      $('select#car_make option:gt(0)').remove();
+      var year = $('select#car_year').val();
       $.getJSON(
         "/edmunds_makes.json?year="+year,
         function(data) {
@@ -34,13 +34,13 @@ $(document).ready(function() {
   });
 
   //enable the model selector after choosing a make
-  $('select#make').change(function() {
-    $modelSelect = $('select#model');
+  $('select#car_make').change(function() {
+    $modelSelect = $('select#car_model');
     if ($(this).val() != "") {
       $modelSelect.removeAttr("disabled");
-      $('select#model option:gt(0)').remove();
-      var year = $('select#year').val();
-      var make = $('select#make').val();
+      $('select#car_model option:gt(0)').remove();
+      var year = $('select#car_year').val();
+      var make = $('select#car_make').val();
       $.getJSON(
         "/edmunds_models.json?year="+year+"&make="+make,
         function(data) {
@@ -55,14 +55,14 @@ $(document).ready(function() {
   });
 
   //enable the trim selector after choosing a model
-  $('select#model').change(function() {
-    $trimSelect = $('select#trim');
+  $('select#car_model').change(function() {
+    $trimSelect = $('select#car_trim');
     if ($(this).val() != "") {
       $trimSelect.removeAttr("disabled");
-      $('select#trim option:gt(0)').remove();
-      var year = $('select#year').val();
-      var make = $('select#make').val();
-      var model = $('select#model').val();
+      $('select#car_trim option:gt(0)').remove();
+      var year = $('select#car_year').val();
+      var make = $('select#car_make').val();
+      var model = $('select#car_model').val();
       $.getJSON(
         "/edmunds_styles.json?year="+year+"&make="+make+"&model="+model,
         function(data) {
@@ -77,12 +77,14 @@ $(document).ready(function() {
   });
 
   //enable the submit button after choosing a trim
-  $('select#trim').change(function() {
+  $('select#car_trim').change(function() {
     if ($(this).val() === "") {
       $('#add-to-garage').attr('disabled', 'disabled');
+      $('#trim_name').val("");
     }
     else {
       $('#add-to-garage').removeAttr("disabled");
+      $('#trim_name').val($('select#car_trim').find('option:selected').text());
     }
   });
 

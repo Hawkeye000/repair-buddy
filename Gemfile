@@ -34,7 +34,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'launchy'
   gem 'vcr'
   gem 'factory_girl_rails', '~> 4.0'
 end
@@ -42,6 +41,7 @@ end
 group :test do
   gem 'shoulda-matchers', require: false
   gem 'launchy', require: false
+  gem 'database_cleaner', require:false
 end
 
 # use devise and pundit for auth&auth

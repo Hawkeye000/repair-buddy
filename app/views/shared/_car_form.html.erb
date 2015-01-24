@@ -1,19 +1,21 @@
-<%= form_tag user_cars_path, method: :post do %>
+<%= form_for [@user, @car] do |f| %>
   <div class="row">
     <div class="form-group col-lg-3">
-      <%= select_tag(:year, options_for_select((1975..DateTime.now.year).map { |y| y.to_s }.reverse), class:"form-control", prompt:"Select Year...") %>
+      <%= f.select(:year, options_for_select((1975..DateTime.now.year).map { |y| y.to_s }.reverse),{prompt:"Select Year..."}, class:"form-control", ) %>
     </div>
     <div class="form-group col-lg-3">
-      <%= select_tag(:make, options_for_select(""), class:"form-control", prompt:"Select Make...", disabled:true) %>
+      <%= f.select(:make, options_for_select(""),{prompt:"Select Make..."}, class:"form-control", disabled:true) %>
     </div>
     <div class="form-group col-lg-3">
-      <%= select_tag(:model, options_for_select(""), class:"form-control", prompt:"Select Model...", disabled:true) %>
+      <%= f.select(:model, options_for_select(""),{prompt:"Select Model..."}, class:"form-control", disabled:true) %>
     </div>
     <div class="form-group col-lg-3">
-      <%= select_tag(:trim, options_for_select(""), class:"form-control", prompt:"Select Trim...", disabled:true) %>
+      <%= f.select(:edmunds_id, options_for_select(""),{prompt:"Select Trim..."}, class:"form-control", disabled:true, id:'car_trim') %>
     </div>
+    <%= f.hidden_field(:user_id, value:@user.id) %>
+    <%= f.hidden_field(:trim, value:"", id:'trim_name') %>
   </div>
   <div class="row">
-    <%= submit_tag "Add Car to Garage", class:"btn btn-primary", id:"add-to-garage", disabled:true %>
+    <%= f.submit "Add Car to Garage", class:"btn btn-primary", id:"add-to-garage", disabled:true %>
   </div>
 <% end %>
