@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe CarsController, :type => :controller do
 
   let(:user) { create(:user) }
+  let(:other_user) { create(:user, name:"Jane Doe", email:"jane@example.com") }
 
   describe 'GET#index' do
     context "user signed in" do
@@ -19,15 +20,27 @@ RSpec.describe CarsController, :type => :controller do
       end
     end
     context "user not signed in" do
+      before { get :index, user_id:user }
       it "does not render the index view" do
-        get :index, user_id:user
         expect(response).to_not render_template :index
       end
       it "redirects to the sign_in page" do
-        get :index, user_id:user
         expect(response).to redirect_to new_user_session_path
       end
     end
+    context "current_user.id doesn't match params[:user_id]" do
+      before do
+        sign_in other_user
+        get :index, user_id:user
+      end
+      it "does not render the index view" do
+        expect(response).to_not render_template :index
+      end
+      it "redirects to that user's garage" do
+        expect(response).to redirect_to user_cars_path(other_user.id)
+      end
+    end
+
   end
 
   describe 'GET#new' do
@@ -71,6 +84,16 @@ RSpec.describe CarsController, :type => :controller do
           }.to_not change(Car, :count)
         end
       end
+      context "current_user.id doesn't match params[:user_id]" do
+        before do
+          sign_in other_user
+        end
+        it "does not save the car in a database" do
+          expect {
+            post :create, user_id:user.id, car: attributes_for(:invalid_car)
+          }.to raise_exception
+        end
+      end
     end
   end
 
@@ -92,7 +115,17 @@ RSpec.describe CarsController, :type => :controller do
       it "does not remove the car from the database" do
         expect{
           delete :destroy, user_id:user.id, id:@car.id
-        }.to_not change(Car, :count)
+        }.to raise_exception
+      end
+    end
+    context "current_user.id doesn't match params[:user_id]" do
+      before do
+        sign_in other_user
+      end
+      it "does not delete the car from the database" do
+        expect {
+          delete :destroy, user_id:user.id, id:@car.id
+        }.to raise_exception
       end
     end
   end

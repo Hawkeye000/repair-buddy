@@ -4,9 +4,11 @@ class CarsController < ApplicationController
   end
 
   def index
-    if current_user
-      @cars = Car.where(user_id:current_user.id)
-      @user = current_user
+    @user = User.find(params[:user_id])
+    if @user == current_user
+      @cars = Car.where(user:@user)
+    elsif current_user
+      redirect_to user_cars_path(current_user.id)
     else
       redirect_to new_user_session_path
     end
@@ -23,6 +25,7 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+    authorize @car
     if @car.save
       redirect_to root_path
     else
@@ -31,8 +34,9 @@ class CarsController < ApplicationController
   end
 
   def destroy
-    if current_user
-      Car.find(params[:id]).destroy
+    @car = Car.find(params[:id])
+    authorize @car
+    if @car.destroy
       redirect_to user_cars_path
     else
       redirect_to root_path
