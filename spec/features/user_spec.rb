@@ -53,7 +53,7 @@ describe 'Signing up new Users' do
 
   after do |example|
     if example.exception != nil
-      save_and_open_page
+      # save_and_open_page
     end
   end
 

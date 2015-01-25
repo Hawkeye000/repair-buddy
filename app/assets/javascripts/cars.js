@@ -79,11 +79,11 @@ $(document).ready(function() {
   //enable the submit button after choosing a trim
   $('select#car_trim').change(function() {
     if ($(this).val() === "") {
-      $('#add-to-garage').attr('disabled', 'disabled');
+      $('#params-add-to-garage').attr('disabled', 'disabled');
       $('#trim_name').val("");
     }
     else {
-      $('#add-to-garage').removeAttr("disabled");
+      $('#params-add-to-garage').removeAttr("disabled");
       $('#trim_name').val($('select#car_trim').find('option:selected').text());
     }
   });

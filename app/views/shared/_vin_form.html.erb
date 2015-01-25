@@ -16,25 +16,27 @@
   <%= f.hidden_field(:model, value:'', id:'vin_model_form') %>
   <%= f.hidden_field(:trim, value:'', id:'vin_trim_form') %>
   <%= f.hidden_field(:year, value:'', id:'vin_year_form') %>
-  <div id="vin_info" class="row" style="display:none;">
-    <div class="col-lg-1">
-      <div class="row" style="font-weight:bold;">Year</div>
-      <div class="row" id="vin_year"></div>
+  <div id="vin_info" style="display:none;">
+    <div class="row">
+      <div class="col-lg-1">
+        <div class="row" style="font-weight:bold;">Year</div>
+        <div class="row" id="vin_year"></div>
+      </div>
+      <div class="col-lg-2">
+        <div class="row" style="font-weight:bold;">Make</div>
+        <div class="row" id="vin_make"></div>
+      </div>
+      <div class="col-lg-2">
+        <div class="row" style="font-weight:bold;">Model</div>
+        <div class="row" id="vin_model"></div>
+      </div>
+      <div class="col-lg-3">
+        <div class="row" style="font-weight:bold;">Trim</div>
+        <div class="row" id="vin_trim"></div>
+      </div>
     </div>
-    <div class="col-lg-2">
-      <div class="row" style="font-weight:bold;">Make</div>
-      <div class="row" id="vin_make"></div>
-    </div>
-    <div class="col-lg-2">
-      <div class="row" style="font-weight:bold;">Model</div>
-      <div class="row" id="vin_model"></div>
-    </div>
-    <div class="col-lg-3">
-      <div class="row" style="font-weight:bold;">Trim</div>
-      <div class="row" id="vin_trim"></div>
-    </div>
-  </div>
     <div class="row">
       <%= f.submit "Add Car to Garage", class:"btn btn-primary", id:"vin-add-to-garage" %>
     </div>
+  </div>
 <% end %>
