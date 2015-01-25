@@ -25,7 +25,7 @@ describe 'Signing up new Users' do
       login_as user
       visit new_user_car_path(user.id)
       VCR.use_cassette('user_filling_car_search_form') do
-        within('#new_car') {
+        within('#car_form #new_car') {
           select "2004", from:"car_year"
           select "Honda", from:"car_make"
           select "Civic", from:"car_model"

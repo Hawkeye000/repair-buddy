@@ -111,7 +111,7 @@ describe "car searching with parameters", vcr:true do
             context "default reslected" do
               before { select "Select Trim...", from:"car_trim" }
               it "should disable the add-to-garage button", js:true do
-                expect(page).to have_css('#add-to-garage[disabled=disabled]')
+                expect(page).to have_css('#params-add-to-garage[disabled=disabled]')
               end
               it "should update the hidden_trim name to ''", js:true do
                 expect(page.find('#trim_name', visible:false).value).to eq("")

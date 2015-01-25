@@ -92,10 +92,19 @@ $(document).ready(function() {
 
 $(document).ajaxSuccess(function(event, xhr, settings) {
   if (settings.url.indexOf('/edmunds_vin') > -1) {
-    $('#vin_info').css("display", "block")
+    $('#vin_info').css("display", "block");
+
+    $('#vin_make_form').val(xhr.responseJSON.make);
     $('#vin_make').text(xhr.responseJSON.make);
+
+    $('#vin_model_form').val(xhr.responseJSON.model);
     $('#vin_model').text(xhr.responseJSON.model);
+
+    $('#vin_year_form').val(xhr.responseJSON.year);
     $('#vin_year').text(xhr.responseJSON.year);
+
+    $('#vin_edmunds_id_form').val(xhr.responseJSON.edmunds_id);
+    $('#vin_trim_form').val(xhr.responseJSON.trim);
     $('#vin_trim').text(xhr.responseJSON.trim);
   }
 });
