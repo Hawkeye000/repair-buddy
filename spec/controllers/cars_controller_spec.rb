@@ -31,7 +31,6 @@ RSpec.describe CarsController, :type => :controller do
   end
 
   describe 'GET#new' do
-
     context "user signed in" do
       before { sign_in user }
       it "should assign Car#new to @car" do
@@ -52,7 +51,6 @@ RSpec.describe CarsController, :type => :controller do
   end
 
   describe 'POST#create' do
-
     context "user signed in" do
       before { sign_in user }
       context "valid parameters" do
@@ -73,9 +71,30 @@ RSpec.describe CarsController, :type => :controller do
           }.to_not change(Car, :count)
         end
       end
-
     end
+  end
 
+  describe 'DELETE#destroy' do
+    before { @car = create(:car, user_id:user.id) }
+    context "user signed in" do
+      before { sign_in user }
+      it "removes the car from the database" do
+        expect {
+          delete :destroy, user_id:user.id, id:@car.id
+        }.to change(Car, :count).by(-1)
+      end
+      it "redirects back to the index" do
+        delete :destroy, user_id:user.id, id:@car.id
+        expect(response).to redirect_to user_cars_path(user.id)
+      end
+    end
+    context "user not signed in" do
+      it "does not remove the car from the database" do
+        expect{
+          delete :destroy, user_id:user.id, id:@car.id
+        }.to_not change(Car, :count)
+      end
+    end
   end
 
 end

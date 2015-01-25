@@ -1,4 +1,7 @@
-<ul>
-  <h3><%= "#{car.year} #{car.make} #{car.model}" %></h3>
+<ul id=<%= "car#{car.id}" %>>
+  <h3><%= link_to "#{car.year} #{car.make} #{car.model}", user_car_path(car.user.id, car.id) %></h3>
   <h4><%= "#{car.trim}" %></h4>
+  <%= link_to "Remove from Garage",
+      user_car_path(car.user.id, car.id),
+      method:'delete', class:'btn btn-danger btn-xs' %>
 </ul>
