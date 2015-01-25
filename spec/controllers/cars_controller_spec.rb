@@ -102,7 +102,10 @@ RSpec.describe CarsController, :type => :controller do
   end
 
   describe 'DELETE#destroy' do
-    before { @car = create(:car, user_id:user.id) }
+    before do
+      @car = create(:car, user_id:user.id)
+      @car2 = create(:car, user_id:user.id)
+    end
     context "user signed in" do
       before { sign_in user }
       it "removes the car from the database" do

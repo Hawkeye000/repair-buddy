@@ -18,6 +18,9 @@ describe "home page" do
     it "should not have a link to 'Garage'" do
       expect(page).to_not have_link("Garage", href:user_cars_path(user))
     end
+    it "should not have a link to 'Settings'" do
+      expect(page).to_not have_link("Settings", href:edit_user_registration_path)
+    end
   end
   context "user is logged in" do
 
@@ -37,6 +40,9 @@ describe "home page" do
     end
     it "should have a link to 'Garage'" do
       expect(page).to have_link("Garage", href:user_cars_path(user))
+    end
+    it "should have a link to 'Settings'" do
+      expect(page).to have_link("Settings", href:edit_user_registration_path)
     end
   end
 

@@ -9,6 +9,8 @@
     <% if current_user %>
       <li><%= link_to "Add Car", new_user_car_path(current_user.id) %></li>
       <li><%= link_to "Garage", user_cars_path(current_user.id) %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Settings", edit_user_registration_path %></li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
     <% end %>
   </ul>
