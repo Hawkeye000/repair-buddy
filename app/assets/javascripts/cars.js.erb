@@ -88,7 +88,13 @@ $(document).ready(function() {
     }
   });
 
+  $('.car_listing').bind('ajax:complete', function() {
+    $(this).hide();
+  });
+
 });
+
+
 
 $(document).ajaxSuccess(function(event, xhr, settings) {
   if (settings.url.indexOf('/edmunds_vin') > -1) {

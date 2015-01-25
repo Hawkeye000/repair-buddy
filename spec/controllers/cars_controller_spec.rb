@@ -76,6 +76,10 @@ RSpec.describe CarsController, :type => :controller do
           post :create, user_id:user.id, car: attributes_for(:car)
           expect(user.cars.first.edmunds_id).to eq(build(:car).edmunds_id)
         end
+        it "redirects to the 'Garage'" do
+          post :create, user_id:user.id, car: attributes_for(:car)
+          expect(response).to redirect_to user_cars_path(user.id)
+        end
       end
       context "invalid parameters" do
         it "does not save the car in a database" do

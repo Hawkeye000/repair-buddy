@@ -27,7 +27,7 @@ class CarsController < ApplicationController
     @car = Car.new(car_params)
     authorize @car
     if @car.save
-      redirect_to root_path
+      redirect_to user_cars_path(@car.user.id)
     else
       render :new
     end
@@ -37,9 +37,9 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
     authorize @car
     if @car.destroy
-      redirect_to user_cars_path
+      redirect_to user_cars_path unless request.xhr?
     else
-      redirect_to root_path
+      redirect_to root_path unless request.xhr?
     end
   end
 
