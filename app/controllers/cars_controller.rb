@@ -3,6 +3,15 @@ class CarsController < ApplicationController
   def show
   end
 
+  def index
+    if current_user
+      @cars = Car.where(user_id:current_user.id)
+      @user = current_user
+    else
+      redirect_to new_user_session_path
+    end
+  end
+
   def new
     if current_user
       @car = Car.new

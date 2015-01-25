@@ -4,6 +4,32 @@ RSpec.describe CarsController, :type => :controller do
 
   let(:user) { create(:user) }
 
+  describe 'GET#index' do
+    context "user signed in" do
+      before { sign_in user }
+      it "should assign Car#where(user_id==user.id) to @cars" do
+        car = create(:car)
+        create(:car, user_id:2)
+        get :index, user_id:user
+        expect(assigns(:cars)).to eq([car])
+      end
+      it "renders the index view" do
+        get :index, user_id:user
+        expect(response).to render_template :index
+      end
+    end
+    context "user not signed in" do
+      it "does not render the index view" do
+        get :index, user_id:user
+        expect(response).to_not render_template :index
+      end
+      it "redirects to the sign_in page" do
+        get :index, user_id:user
+        expect(response).to redirect_to new_user_session_path
+      end
+    end
+  end
+
   describe 'GET#new' do
 
     context "user signed in" do

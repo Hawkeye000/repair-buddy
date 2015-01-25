@@ -58,6 +58,9 @@ gem 'autoprefixer-rails'
 # Rest Client
 gem 'rest_client'
 
+# Possessive Helper
+gem 'possessive'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

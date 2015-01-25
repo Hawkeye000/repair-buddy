@@ -1,0 +1,7 @@
+<div class="row">
+  <h1><%= "#{@user.name.possessive} Garage" %></h1>
+  <ol>
+    <% @cars.each do |car| %>
+      <li><%= render 'car_data', car:car %></li>
+    <% end %>
+  </ol>
