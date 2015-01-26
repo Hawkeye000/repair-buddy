@@ -5,4 +5,20 @@ RSpec.describe Record, :type => :model do
     it { should belong_to :car }
     it { should have_many(:parts).through(:part_records) }
   end
+
+  describe "validations" do
+    it { should allow_value("Maintenance").for(:record_type) }
+    it { should allow_value("Repair").for(:record_type) }
+    it { should_not allow_value("a").for(:record_type) }
+    it { should_not allow_value("").for(:record_type) }
+  end
+
+  describe "factories" do
+    it "should have a valid factory" do
+      expect(build(:record)).to be_valid
+    end
+    it "should have an invalid factory" do
+      expect(build(:invalid_record)).to_not be_valid
+    end
+  end
 end

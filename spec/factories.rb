@@ -26,4 +26,16 @@ FactoryGirl.define do
   factory :invalid_car, parent: :car do
     trim ""
   end
+
+  factory :record do
+    record_type "Maintenance"
+    user_id 1
+    car_id 1
+  end
+
+  factory :invalid_record, parent: :record do
+    record_type ""
+    user_id 1
+    car_id 1
+  end
 end
