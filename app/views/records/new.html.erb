@@ -1,0 +1,41 @@
+<%= form_for @record, url:user_car_records_path(params[:user_id], params[:car_id]) do |f| %>
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="form-group">
+        <%= f.label :mileage %>
+        <%= f.text_field :mileage, class:"form-control" %>
+      </div>
+      <div>
+        <div class="radio">
+          <label>
+            <%= f.radio_button :record_type, 'Maintenance', checked:true %>
+            Maintenance
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <%= f.radio_button :record_type, 'Repair' %>
+            Repair
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :user_id, class:"sr-only" %>
+        <%= f.hidden_field :user_id, value:params[:user_id], class:"form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :car_id, class:"sr-only" %>
+        <%= f.hidden_field :car_id, value:params[:car_id], class:"form-control" %>
+      </div>
+    </div>
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-6">
+      <%= f.label :description %>
+      <%= f.text_area :description, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <%= f.submit 'Add Record', class:'btn btn-primary' %>
+  </div>
+<% end %>
