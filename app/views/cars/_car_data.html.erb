@@ -2,6 +2,12 @@
   <ul id=<%= "car#{car.id}" %> >
     <h3><%= link_to "#{car.year} #{car.make} #{car.model}", user_car_path(car.user.id, car.id) %></h3>
     <h4><%= "#{car.trim}" %></h4>
+    <%= link_to "Add New Service Record",
+        new_user_car_record_path(car.user.id, car.id),
+        class:'btn btn-default btn-xs' %>
+    <%= link_to "Service Records",
+        user_car_records_path(car.user.id, car.id),
+        class:'btn btn-default btn-xs' %>
     <%= link_to "Remove from Garage",
         user_car_path(car.user.id, car.id),
         method:'delete', class:'btn btn-danger btn-xs',
