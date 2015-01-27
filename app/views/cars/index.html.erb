@@ -5,3 +5,7 @@
       <%= render 'car_data', car:car %>
     <% end %>
   </ol>
+</div>
+<div class="row">
+  <%= link_to 'Add New Car', new_user_car_path(user:@user), class:"btn btn-primary btn-xs" %>
+</div>
