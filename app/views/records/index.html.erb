@@ -1,0 +1,29 @@
+<h1>Service Records</h1>
+<h2><%= link_to "#{@car.year} #{@car.make} #{@car.model}",
+        user_car_path(user_id:@car.user_id, id:@car.id) %>
+</h2>
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Short Title</th>
+        <th>Type</th>
+        <th>Mileage</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @records.each do |record| %>
+        <tr>
+          <td>
+            <%= link_to record.short_title,
+                user_car_record_path(user_id:record.user_id, car_id:record.car_id, id:record.id) %>
+          </td>
+          <td><%= record.record_type %></td>
+          <td><%= record.mileage %></td>
+          <td><%= number_to_currency record.cost %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

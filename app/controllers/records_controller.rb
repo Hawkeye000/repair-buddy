@@ -1,7 +1,7 @@
 class RecordsController < ApplicationController
 
   before_filter :set_record, only:[:show, :edit, :destroy, :update]
-  before_filter :set_car, only:[:show]
+  before_filter :set_car, only:[:show, :index]
 
   def show
   end
