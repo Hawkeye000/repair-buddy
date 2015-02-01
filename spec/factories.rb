@@ -35,6 +35,7 @@ FactoryGirl.define do
     short_title "Oil Change"
     description "Routine oil change"
     cost 21.50
+    date DateTime.now.to_date
   end
 
   factory :invalid_record, parent: :record do

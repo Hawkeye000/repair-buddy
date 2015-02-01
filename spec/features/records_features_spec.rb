@@ -16,7 +16,8 @@ describe "records features" do
             fill_in :record_mileage, with:new_record.mileage
             fill_in :record_description, with:"Foobar"
             fill_in :record_short_title, with:"Oil Change"
-            fill_in :record_cost, with:"21.50"
+            fill_in :record_cost, with:new_record.cost
+            fill_in :record_date, with:new_record.date
           end
           it "creates a new record" do
             expect{click_button 'Add Record'}.to change(Record, :count).by(1)
