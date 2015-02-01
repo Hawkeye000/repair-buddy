@@ -33,6 +33,8 @@ FactoryGirl.define do
     car_id 1
     mileage 100
     short_title "Oil Change"
+    description "Routine oil change"
+    cost 21.50
   end
 
   factory :invalid_record, parent: :record do

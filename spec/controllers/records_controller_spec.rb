@@ -52,6 +52,10 @@ RSpec.describe RecordsController, :type => :controller do
         latest_record = Record.last
         expect(response).to redirect_to user_car_record_path(latest_record.user_id, latest_record.car_id, latest_record.id)
       end
+      it "contains all permitted attributes" do
+        post :create, user_id:user, car_id:car, record:attributes_for(:record)
+        expect(Record.last.attributes).to include(attributes_for(:record).stringify_keys)
+      end
     end
 
     context "with invalid attributes" do
@@ -62,7 +66,7 @@ RSpec.describe RecordsController, :type => :controller do
       end
       it "re-renders the new view" do
         post :create, user_id:user, car_id:car, record:attributes_for(:invalid_record)
-        response.should render_template :new
+        expect(response).to render_template :new
       end
     end
   end

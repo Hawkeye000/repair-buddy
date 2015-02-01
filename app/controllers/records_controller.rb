@@ -1,6 +1,7 @@
 class RecordsController < ApplicationController
 
   before_filter :set_record, only:[:show, :edit, :destroy, :update]
+  before_filter :set_car, only:[:show]
 
   def show
   end
@@ -47,8 +48,12 @@ class RecordsController < ApplicationController
       @record = Record.find(params[:id])
     end
 
+    def set_car
+      @car = Car.find(params[:car_id])
+    end
+
     def record_params
-      params.require(:record).permit(:record_type, :car_id, :user_id, :mileage, :short_title)
+      params.require(:record).permit(:record_type, :car_id, :user_id, :mileage, :short_title, :description, :cost)
     end
 
 end

@@ -6,4 +6,5 @@ class Record < ActiveRecord::Base
   validates :record_type, format: { with: /\A(Maintenance|Repair)\z/ }
   validates :mileage, numericality: { integer_only:true, greater_than_or_equal_to:0 }
   validates :short_title, presence:true
+  validates :cost, numericality: { greater_than_or_equal_to:0.0 }
 end

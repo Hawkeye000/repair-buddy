@@ -16,6 +16,10 @@ RSpec.describe Record, :type => :model do
     it { should allow_value(70000).for(:mileage) }
 
     it { should validate_presence_of :short_title }
+
+    it { should allow_value(21.50).for(:cost) }
+    it { should_not allow_value(-21.50).for(:cost) }
+    it { should allow_value(0).for(:cost) }
   end
 
   describe "factories" do

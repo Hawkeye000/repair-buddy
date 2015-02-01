@@ -1,30 +1,21 @@
 <h1>New Service Record</h1>
 <%= form_for @record, url:user_car_records_path(params[:user_id], params[:car_id]) do |f| %>
-  <div class="radio">
-    <label>
-      <%= f.radio_button :short_title, 'Oil Change' %>
-      Oil Change
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <%= f.radio_button :short_title, 'Tire Rotation' %>
-      Tire Rotation
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <%= f.radio_button :short_title, 'Other' %>
-      Other
-    </label>
+  <div class="form-group">
+    <%= f.label :short_title, 'Short Title' %>
+    <%= f.text_field :short_title,
+        class:"form-control", :'data-toggle'=>"tooltip",
+        :'data-placement'=>"top", title:"Enter something like 'Oil Change' or 'Tire Rotation'" %>
   </div>
   <div class="row">
     <div class="col-lg-5">
-      <div class="form-group">
-        <%= f.label :mileage %>
-        <%= f.text_field :mileage, class:"form-control" %>
+      <div class="form-group row">
+        <div class="col-lg-5">
+          <%= f.label :mileage %>
+          <%= f.text_field :mileage, class:"form-control" %>
+        </div>
       </div>
-      <div>
+      <div class="row">
+        <label>Service Type</label>
         <div class="radio">
           <label>
             <%= f.radio_button :record_type, 'Maintenance', checked:true %>
@@ -50,8 +41,15 @@
     <div class="col-lg-1">
     </div>
     <div class="col-lg-6">
-      <%= f.label :description %>
-      <%= f.text_area :description, class:"form-control" %>
+      <%= f.label :cost %>
+      <div class="input-group col-lg-3">
+        <span class="input-group-addon">$</span>
+        <%= f.text_field :cost, class:"form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class:"form-control" %>
+      </div>
     </div>
   </div>
   <div class="row">
