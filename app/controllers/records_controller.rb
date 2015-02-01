@@ -48,7 +48,7 @@ class RecordsController < ApplicationController
     end
 
     def record_params
-      params.require(:record).permit(:record_type, :car_id, :user_id, :mileage)
+      params.require(:record).permit(:record_type, :car_id, :user_id, :mileage, :short_title)
     end
 
 end

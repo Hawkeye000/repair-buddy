@@ -50,7 +50,7 @@ RSpec.describe RecordsController, :type => :controller do
       it "redirects to the new record" do
         post :create, user_id:user, car_id:car, record:attributes_for(:record)
         latest_record = Record.last
-        response.should redirect_to user_car_record_path(latest_record.user_id, latest_record.car_id, latest_record.id)
+        expect(response).to redirect_to user_car_record_path(latest_record.user_id, latest_record.car_id, latest_record.id)
       end
     end
 

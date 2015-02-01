@@ -32,6 +32,7 @@ FactoryGirl.define do
     user_id 1
     car_id 1
     mileage 100
+    short_title "Oil Change"
   end
 
   factory :invalid_record, parent: :record do

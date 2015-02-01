@@ -14,6 +14,7 @@ describe "new record page" do
           visit new_user_car_record_path(user_id:user.id, car_id:car.id)
           fill_in :record_mileage, with:new_record.mileage
           fill_in :record_description, with:"Foobar"
+          choose 'record_short_title_oil_change'
           expect{click_button 'Add Record'}.to change(Record, :count).by(1)
         end
       end

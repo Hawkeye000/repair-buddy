@@ -1,4 +1,23 @@
+<h1>New Service Record</h1>
 <%= form_for @record, url:user_car_records_path(params[:user_id], params[:car_id]) do |f| %>
+  <div class="radio">
+    <label>
+      <%= f.radio_button :short_title, 'Oil Change' %>
+      Oil Change
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <%= f.radio_button :short_title, 'Tire Rotation' %>
+      Tire Rotation
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <%= f.radio_button :short_title, 'Other' %>
+      Other
+    </label>
+  </div>
   <div class="row">
     <div class="col-lg-5">
       <div class="form-group">

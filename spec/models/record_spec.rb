@@ -11,9 +11,11 @@ RSpec.describe Record, :type => :model do
     it { should allow_value("Repair").for(:record_type) }
     it { should_not allow_value("a").for(:record_type) }
     it { should_not allow_value("").for(:record_type) }
-    
+
     it { should_not allow_value(-1).for(:mileage) }
     it { should allow_value(70000).for(:mileage) }
+
+    it { should validate_presence_of :short_title }
   end
 
   describe "factories" do
