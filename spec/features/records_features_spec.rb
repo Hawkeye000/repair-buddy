@@ -14,7 +14,6 @@ describe "records features" do
             login_as user
             visit new_user_car_record_path(user_id:user.id, car_id:car.id)
             fill_in :record_mileage, with:new_record.mileage
-            fill_in :record_description, with:"Foobar"
             fill_in :record_short_title, with:"Oil Change"
             fill_in :record_cost, with:new_record.cost
             fill_in :record_date, with:new_record.date
@@ -22,13 +21,26 @@ describe "records features" do
           it "creates a new record" do
             expect{click_button 'Add Record'}.to change(Record, :count).by(1)
           end
-          it "shows a rendered page with the input information" do
-            click_button 'Add Record'
-            expect(page).to have_content(new_record.mileage)
-            expect(page).to have_content("Foobar")
-            expect(page).to have_content("Oil Change")
-            expect(page).to have_content("Maintenance")
-            expect(page).to have_content("21.50")
+          context "there is a description entered" do
+            it "shows a rendered page with the input information" do
+              fill_in :record_description, with:"Foobar"
+              click_button 'Add Record'
+              expect(page).to have_content(new_record.mileage)
+              expect(page).to have_content("Foobar")
+              expect(page).to have_content("Oil Change")
+              expect(page).to have_content("Maintenance")
+              expect(page).to have_content("21.50")
+              expect(page).to have_content(new_record.date.month)
+              expect(page).to have_content(new_record.date.day)
+              expect(page).to have_content(new_record.date.year)
+            end
+          end
+          context "there is no description entered" do
+            it "does not contain the description, or its header" do
+              click_button 'Add Record'
+              expect(page).to_not have_content("Description")
+              expect(page).to_not have_content("Foobar")
+            end
           end
         end
       end
@@ -62,10 +74,11 @@ describe "records features" do
     context "user signed in" do
       before do
         login_as user
+        @record = create(:record, user_id:user.id, car_id:car.id)
         visit user_car_records_path(user_id:user.id, car_id:car.id)
       end
-      xit "has a link to the record" do
-        expect(page).to have_link(record.short_title, href:user_car_record_path(user_id:user.id, car_id:car.id, id:record.id))
+      it "has a link to the record" do
+        expect(page).to have_link(@record.short_title, href:user_car_record_path(user_id:user.id, car_id:car.id, id:@record.id))
       end
       it "has a link to the car" do
         expect(page).to have_link("#{car.year} #{car.make} #{car.model}", href:user_car_path(user_id:user.id, id:car.id))

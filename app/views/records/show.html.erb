@@ -6,11 +6,13 @@
 </div>
 <div class="row">
   <div class="col-lg-2">
+    <b>Date</b> </br>
     <b>Type</b> </br>
     <b>Mileage</b> </br>
     <b>Cost</b> </br>
   </div>
   <div class="col-lg-3">
+    <%= @record.date.strftime "%B %-d, %Y" %></br>
     <%= @record.record_type %></br>
     <%= @record.mileage.to_s %></br>
     <%= number_to_currency @record.cost %></br>
