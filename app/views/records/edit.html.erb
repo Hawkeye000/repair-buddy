@@ -1,0 +1,7 @@
+<h1>Edit Service Record</h1>
+<%= form_for @record, url:user_car_record_path(params[:user_id], params[:car_id], params[:id]) do |f| %>
+  <%= render partial:'records/form', locals: { f:f } %>
+  <div class="row">
+    <%= f.submit 'Update Record', class:'btn btn-primary' %>
+  </div>
+<% end %>

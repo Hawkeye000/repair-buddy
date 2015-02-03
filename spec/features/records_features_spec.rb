@@ -70,6 +70,27 @@ describe "records features" do
     end
   end
 
+  describe "edit record page" do
+    context "user signed in" do
+      before do
+        login_as user
+        visit edit_user_car_record_path(user_id:user.id, car_id:car.id, id:record.id)
+      end
+      context "with valid parameters" do
+        it "updates the record" do
+          fill_in :record_mileage, with:new_record.mileage
+          fill_in :record_short_title, with:"Oil Change"
+          fill_in :record_cost, with:new_record.cost
+          fill_in :record_date, with:new_record.date
+          fill_in :record_description, with:"Foobar-Foobar"
+          click_button 'Update Record'
+          expect(Record.find(record.id).description).to eq("Foobar-Foobar")
+        end
+      end
+    end
+  end
+
+
   describe "records index page" do
     context "user signed in" do
       before do
