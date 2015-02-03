@@ -7,14 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container">
-    <div class="nav navbar-nav navbar-right">
+    <div class="navbar-header">
+      <%= link_to "RepairBuddy", root_path, class:"navbar-brand" %>
+      <ul class="nav navbar-nav">
+        <%= active_home_link(root_path) %>
+        <%= active_my_records_link(user_records_path(current_user)) if current_user %>
+      </ul>
+    </div>
+    <div class="navbar-right">
         <%= render 'layouts/user_menu' %>
     </div>
   </div>
 </nav>
-<div class="container"
+<div class="container">
   <body>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>

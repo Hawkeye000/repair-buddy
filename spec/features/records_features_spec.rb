@@ -96,6 +96,11 @@ describe "records features" do
         login_as user
         @record = create(:record, user_id:user.id, car_id:car.id)
       end
+      it "can be accessed by clicking 'My Records'" do
+        visit root_path
+        click_link 'My Records'
+        expect(page).to have_content(record.short_title)
+      end
       context "car_id given" do
         before { visit user_car_records_path(user_id:user.id, car_id:car.id) }
         it "has a link to the car" do
