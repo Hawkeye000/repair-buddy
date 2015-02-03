@@ -32,4 +32,11 @@ RSpec.describe Record, :type => :model do
       expect(build(:invalid_record)).to_not be_valid
     end
   end
+
+  describe "print_date" do
+    it "prints the format Month(Text) Day(00), Year(0000)" do
+      record = build(:record, date:DateTime.new(2000, 1, 1).to_date)
+      expect(record.print_date).to eq("January 1, 2000")
+    end
+  end
 end

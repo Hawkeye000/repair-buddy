@@ -104,6 +104,9 @@ describe "records features" do
         it "has a link to the record" do
           expect(page).to have_link(@record.short_title, href:user_car_record_path(user_id:user.id, car_id:car.id, id:@record.id))
         end
+        it "has the date" do
+          expect(page).to have_content(@record.print_date)
+        end
       end
       context "no car_id given" do
         before { visit user_records_path(user_id:user.id) }

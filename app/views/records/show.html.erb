@@ -12,7 +12,7 @@
     <b>Cost</b> </br>
   </div>
   <div class="col-lg-3">
-    <%= @record.date.strftime "%B %-d, %Y" %></br>
+    <%= @record.print_date %></br>
     <%= @record.record_type %></br>
     <%= @record.mileage.to_s %></br>
     <%= number_to_currency @record.cost %></br>

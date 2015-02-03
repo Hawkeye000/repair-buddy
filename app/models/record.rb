@@ -8,4 +8,8 @@ class Record < ActiveRecord::Base
   validates :short_title, presence:true
   validates :cost, numericality: { greater_than_or_equal_to:0.0 }
   validates :date, presence:true
+
+  def print_date
+    self.date.strftime "%B %-d, %Y"
+  end
 end
