@@ -6,14 +6,29 @@ RSpec.describe RecordsController, :type => :controller do
   let(:car) { create(:car, user_id:user.id) }
 
   describe 'GET#index' do
-    it "populates an array of records" do
-      record = create(:record)
-      get :index, user_id:user, car_id:car
-      expect(assigns(:records)).to eq([record])
+
+    let(:car2) { create(:car) }
+    let(:records) { [create(:record, car_id:car.id), create(:record, car_id:car2.id)] }
+
+    context 'car_id given' do
+      it "populates an array of records" do
+        get :index, user_id:user, car_id:car
+        expect(assigns(:records)).to eq([records[0]])
+      end
+      it "renders the index view" do
+        get :index, user_id:user, car_id:car
+        expect(response).to render_template :index
+      end
     end
-    it "renders the index view" do
-      get :index, user_id:user, car_id:car
-      expect(response).to render_template :index
+    context 'no car_id given' do
+      it "populates an array of all records" do
+        get :index, user_id:user
+        expect(assigns(:records)).to eq(records)
+      end
+      it "renders the index view" do
+        get :index, user_id:user
+        expect(response).to render_template :index
+      end
     end
   end
 

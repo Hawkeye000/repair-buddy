@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, only:[:show] do
+    resources :records, only:[:index]
     resources :cars, except:[:edit] do
       resources :records
     end

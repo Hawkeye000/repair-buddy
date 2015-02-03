@@ -5,8 +5,8 @@ describe "records features" do
   let(:car) { create(:car) }
   let(:record) { create(:record) }
   let(:new_record) { build(:record) }
-  describe "new record page" do
 
+  describe "new record page" do
     context "with valid parameters" do
       context "user signed in" do
         context "default radio button" do
@@ -90,19 +90,28 @@ describe "records features" do
     end
   end
 
-
   describe "records index page" do
     context "user signed in" do
       before do
         login_as user
         @record = create(:record, user_id:user.id, car_id:car.id)
-        visit user_car_records_path(user_id:user.id, car_id:car.id)
       end
-      it "has a link to the record" do
-        expect(page).to have_link(@record.short_title, href:user_car_record_path(user_id:user.id, car_id:car.id, id:@record.id))
+      context "car_id given" do
+        before { visit user_car_records_path(user_id:user.id, car_id:car.id) }
+        it "has a link to the car" do
+          expect(page).to have_link("#{car.year} #{car.make} #{car.model}", href:user_car_path(user_id:user.id, id:car.id))
+        end
+        it "has a link to the record" do
+          expect(page).to have_link(@record.short_title, href:user_car_record_path(user_id:user.id, car_id:car.id, id:@record.id))
+        end
       end
-      it "has a link to the car" do
-        expect(page).to have_link("#{car.year} #{car.make} #{car.model}", href:user_car_path(user_id:user.id, id:car.id))
+      context "no car_id given" do
+        before { visit user_records_path(user_id:user.id) }
+        it "has a table entry with the car name" do
+          within(:css, 'table') {
+            expect(page).to have_link("#{car.year} #{car.make} #{car.model}", href:user_car_path(user_id:user.id, id:car.id))
+          }
+        end
       end
     end
   end

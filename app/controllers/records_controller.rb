@@ -7,7 +7,11 @@ class RecordsController < ApplicationController
   end
 
   def index
-    @records = Record.where(user_id:params[:user_id], car_id:params[:car_id])
+    if params[:car_id]
+      @records = Record.where(user_id:params[:user_id], car_id:params[:car_id])
+    else
+      @records = Record.joins(:car).where(user_id:params[:user_id])
+    end
   end
 
   def new
@@ -49,7 +53,7 @@ class RecordsController < ApplicationController
     end
 
     def set_car
-      @car = Car.find(params[:car_id])
+      @car = Car.find(params[:car_id]) unless params[:car_id].nil?
     end
 
     def record_params

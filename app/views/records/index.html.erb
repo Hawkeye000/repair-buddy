@@ -1,11 +1,14 @@
 <h1>Service Records</h1>
-<h2><%= link_to "#{@car.year} #{@car.make} #{@car.model}",
-        user_car_path(user_id:@car.user_id, id:@car.id) %>
-</h2>
+<% if @car %>
+  <h2><%= link_to "#{@car.year} #{@car.make} #{@car.model}",
+          user_car_path(user_id:@car.user_id, id:@car.id) %>
+  </h2>
+<% end %>
 <div class="row">
   <table class="table">
     <thead>
       <tr>
+        <%= content_tag(:th, "Car") unless @car %>
         <th>Short Title</th>
         <th>Type</th>
         <th>Mileage</th>
@@ -15,6 +18,12 @@
     <tbody>
       <% @records.each do |record| %>
         <tr>
+          <% unless @car %>
+            <td>
+              <%= link_to "#{record.car.year} #{record.car.make} #{record.car.model}",
+                  user_car_path(user_id:record.user_id, id:record.car.id) %>
+            </td>
+          <% end %>
           <td>
             <%= link_to record.short_title,
                 user_car_record_path(user_id:record.user_id, car_id:record.car_id, id:record.id) %>
