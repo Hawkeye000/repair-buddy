@@ -95,7 +95,7 @@ RSpec.describe CarsController, :type => :controller do
         it "does not save the car in a database" do
           expect {
             post :create, user_id:user.id, car: attributes_for(:invalid_car)
-          }.to raise_exception
+          }.to_not change(Car, :count)
         end
       end
     end
@@ -122,7 +122,7 @@ RSpec.describe CarsController, :type => :controller do
       it "does not remove the car from the database" do
         expect{
           delete :destroy, user_id:user.id, id:@car.id
-        }.to raise_exception
+        }.to_not change(Car, :count)
       end
     end
     context "current_user.id doesn't match params[:user_id]" do
@@ -132,7 +132,7 @@ RSpec.describe CarsController, :type => :controller do
       it "does not delete the car from the database" do
         expect {
           delete :destroy, user_id:user.id, id:@car.id
-        }.to raise_exception
+        }.to_not change(Car, :count)
       end
     end
   end

@@ -18,6 +18,7 @@ RSpec.describe User, :type => :model do
   end
 
   it { should respond_to :name }
+  it { should respond_to :admin? }
 
   it "should have a valid factory" do
     expect(build(:user)).to be_valid

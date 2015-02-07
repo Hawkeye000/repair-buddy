@@ -10,25 +10,42 @@ RSpec.describe RecordsController, :type => :controller do
     let(:car2) { create(:car) }
     let(:records) { [create(:record, car_id:car.id), create(:record, car_id:car2.id)] }
 
-    context 'car_id given' do
-      it "populates an array of records" do
-        get :index, user_id:user, car_id:car
-        expect(assigns(:records)).to eq([records[0]])
+    context 'user signed in' do
+      before { sign_in user }
+      context 'car_id given' do
+        it "populates an array of records" do
+          get :index, user_id:user, car_id:car
+          expect(assigns(:records)).to eq([records[0]])
+        end
+        it "renders the index view" do
+          get :index, user_id:user, car_id:car
+          expect(response).to render_template :index
+        end
       end
-      it "renders the index view" do
-        get :index, user_id:user, car_id:car
-        expect(response).to render_template :index
+      context 'no car_id given' do
+        it "populates an array of all records" do
+          get :index, user_id:user
+          expect(assigns(:records)).to eq(records)
+        end
+        it "renders the index view" do
+          get :index, user_id:user
+          expect(response).to render_template :index
+        end
       end
     end
-    context 'no car_id given' do
-      it "populates an array of all records" do
-        get :index, user_id:user
-        expect(assigns(:records)).to eq(records)
-      end
-      it "renders the index view" do
-        get :index, user_id:user
-        expect(response).to render_template :index
-      end
+  end
+  context 'user not signed in' do
+    it 'redirects to the sign in page' do
+      get :index, user_id:user
+      expect(response).to redirect_to new_user_session_path
+    end
+  end
+  context 'user != records sought user' do
+    it 'redirects to the sign in page' do
+      user2 = create(:user, email:'user2@example.com')
+      sign_in user2
+      get :index, user_id:user
+      expect(response).to redirect_to root_path
     end
   end
 
