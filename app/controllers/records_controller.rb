@@ -5,6 +5,7 @@ class RecordsController < ApplicationController
   before_filter :set_car, only:[:show, :index]
 
   def show
+    authorize @record
   end
 
   def index
@@ -21,6 +22,7 @@ class RecordsController < ApplicationController
 
   def create
     @record = Record.new(record_params)
+    authorize @record
     if @record.save
       redirect_to user_car_record_path(@record.user_id, @record.car_id, @record.id)
     else
@@ -29,9 +31,11 @@ class RecordsController < ApplicationController
   end
 
   def edit
+    authorize @record
   end
 
   def update
+    authorize @record
     if @record.update(record_params)
       redirect_to user_car_record_path(@record.user_id, @record.car_id, @record.id)
     else
@@ -40,6 +44,7 @@ class RecordsController < ApplicationController
   end
 
   def destroy
+    authorize @record
     if @record.destroy
       redirect_to user_car_records_path(@record.user_id, @record.car_id)
     else
@@ -66,7 +71,6 @@ class RecordsController < ApplicationController
         end
       redirect_to new_path, flash:{alert:"You are not authorized to view this user's records."} if new_path
     end
-
 
     def record_params
       params.require(:record).permit(:record_type, :car_id, :user_id, :mileage, :short_title, :description, :cost, :date)
