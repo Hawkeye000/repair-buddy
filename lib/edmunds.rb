@@ -37,10 +37,11 @@ module Edmunds
   end
 
   def self.auto_style_details(style_id="", options)
+    # edmunds_api needs full view to get engine code and transmission type
+    # this will be used for matching a style id to maintenance records
     options[:params][:view] = "full"
     raw_style_data = RestClient.get(BASE_URI + VEHICLE_V2 + "/styles/#{style_id}", options)
     style_data = JSON.parse(raw_style_data)
-    pp style_data
     style_data_h = {
       :model_year_id => style_data["year"]["id"],
       :engine_code => style_data["engine"]["code"],
