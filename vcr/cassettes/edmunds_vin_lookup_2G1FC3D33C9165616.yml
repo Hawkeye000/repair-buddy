@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.edmunds.com/api/vehicle/v2/vins/2G1FC3D33C9165616?api_key=kjyydh5s5ee2bc8d648s68tx
+    uri: https://api.edmunds.com/api/vehicle/v2/vins/2G1FC3D33C9165616?api_key=<EDMUNDS_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 21 Jan 2015 03:12:37 GMT
+      - Sun, 08 Feb 2015 21:49:55 GMT
       Server:
       - Apache-Coyote/1.1
       Set-Cookie:
-      - EnvironmentID=50646e2914507f32e70573b4c754c6bd;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
+      - EnvironmentID=05a36da31f79f98266fad470f12ef82f;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
+      - EnvironmentID=05a36da31f79f98266fad470f12ef82f;Max-Age=180;Path=/;Version=1;Domain=.edmunds.com;
       X-Environment:
-      - Prod-3
+      - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-76.mashery.com
+      - prod-j-worker-us-east-1b-62.mashery.com
       X-Session:
-      - 50646e2914507f32e70573b4c754c6bd
+      - 05a36da31f79f98266fad470f12ef82f
       Content-Length:
       - '2368'
       Connection:
@@ -50,10 +51,10 @@ http_interactions:
         only)","equipmentType":"OPTION","availability":"LT"}]},{"category":"Exterior","options":[{"id":"200381492","name":"Compact
         Spare Tire And Wheel","description":"Deletes tire sealant and inflator kit.","equipmentType":"OPTION","availability":"All
         Except SS"}]}],"colors":[{"category":"Interior","options":[{"id":"200381103","name":"Black","equipmentType":"COLOR","availability":"USED"}]},{"category":"Exterior","options":[{"id":"200381113","name":"Silver
-        Ice Metallic","equipmentType":"COLOR","availability":"USED"}]},{"category":"Roof","options":[{"id":"200381095","name":"Black","equipmentType":"COLOR","availability":"USED"}]}],"manufacturerCode":"1EH67","price":{"baseMSRP":34180.0,"baseInvoice":32813.0,"deliveryCharges":900.0,"usedTmvRetail":21073.0,"usedPrivateParty":19782.0,"usedTradeIn":18204.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"Performance","EPAClass":"Compact
+        Ice Metallic","equipmentType":"COLOR","availability":"USED"}]},{"category":"Roof","options":[{"id":"200381095","name":"Black","equipmentType":"COLOR","availability":"USED"}]}],"manufacturerCode":"1EH67","price":{"baseMSRP":34180.0,"baseInvoice":32813.0,"deliveryCharges":900.0,"usedTmvRetail":20557.0,"usedPrivateParty":19214.0,"usedTradeIn":17699.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"Performance","EPAClass":"Compact
         Cars","vehicleSize":"Midsize","primaryBodyType":"Car","vehicleStyle":"Convertible","vehicleType":"Car"},"vin":"2G1FC3D33C9165616","squishVin":"2G1FC3D3C9","years":[{"id":100531911,"year":2012,"styles":[{"id":101395591,"name":"LT
         2dr Convertible w/2LT (3.6L 6cyl 6M)","submodel":{"body":"Convertible","modelName":"Camaro
         Convertible","niceName":"convertible"},"trim":"LT"}]}],"matchingType":"SQUISHVIN","MPG":{"highway":"28","city":"17"}}'
     http_version: 
-  recorded_at: Wed, 21 Jan 2015 03:43:06 GMT
+  recorded_at: Sun, 08 Feb 2015 21:49:38 GMT
 recorded_with: VCR 2.9.3
