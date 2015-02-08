@@ -23,6 +23,12 @@ RSpec.describe Record, :type => :model do
     it { should allow_value(0).for(:cost) }
 
     it { should validate_presence_of :date }
+
+    it "converts nil cost to $0.00" do
+      record = build(:record, cost:nil)
+      record.save!
+      expect(record.cost).to eq(0)
+    end
   end
 
   describe "factories" do
