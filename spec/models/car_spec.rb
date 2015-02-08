@@ -30,4 +30,34 @@ RSpec.describe Car, :type => :model do
       expect(build(:invalid_car)).to_not be_valid
     end
   end
+
+  describe "self.latest_mileage" do
+    it "returns the last service record's mileage" do
+      car = create(:car)
+      create(:record, car_id:car.id, mileage:65000)
+      create(:record, car_id:car.id, mileage:48000)
+      expect(car.latest_mileage).to eq(65000)
+    end
+  end
+
+  describe "self.mileage_rate" do
+    let(:car) { create(:car) }
+    before do
+      create(:record, car_id:car.id, mileage:65000, date:DateTime.new(2015, 1, 1))
+      create(:record, car_id:car.id, mileage:48000, date:DateTime.new(2014, 1, 1))
+    end
+    it "returns the average miles put on in a year" do
+      expect(car.mileage_rate(:year)).to be_within(24.0).of(17000)
+    end
+    it "returns the average miles put on in a month" do
+      expect(car.mileage_rate(:month)).to be_within(2.0).of(1416.67)
+    end
+    it "returns the average miles put on in a day" do
+      expect(car.mileage_rate(:day)).to be_within(2.0).of(46.6)
+    end
+    it "returns the aveerage miles put on in a week" do
+      expect(car.mileage_rate(:week)).to be_within(10.0).of(326.9)
+    end
+  end
+
 end
