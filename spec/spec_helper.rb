@@ -23,6 +23,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.configure_rspec_metadata!
   c.ignore_localhost = true
+  c.filter_sensitive_data("<EDMUNDS_API_KEY>") { "#{ENV["EDMUNDS_API_KEY"]}" }
 end
 
 RSpec.configure do |config|
