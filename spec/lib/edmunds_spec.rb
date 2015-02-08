@@ -150,4 +150,19 @@ describe "edmunds.rb" do
 
   end
 
+  describe "self#auto_show_picture" do
+    context "with no details" do
+      it "returns a front quarter picture of the whole car at 500px" do
+        VCR.use_cassette 'edmunds_pics_2012_aston_martin_db9' do
+          @model_pic_url = Edmunds.auto_show_picture(params:
+              { api_key:Rails.application.secrets.edmunds_api_key,
+                styleId:101404908 })
+        end
+        expect(@model_pic_url).to eq(
+            "http://media.ed.edmunds-media.com/aston-martin/db9/2012/oem"+
+            "/2012_aston-martin_db9_convertible_volante_fq_oem_1_500.jpg")
+      end
+    end
+  end
+
 end

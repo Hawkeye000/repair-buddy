@@ -3,6 +3,8 @@ module Edmunds
   BASE_URI = "https://api.edmunds.com"
   VEHICLE_V2 = "/api/vehicle/v2"
   VEHICLE_V1 = "/api/vehicle/v1"
+  PHOTO_V1 = "/v1/api/vehiclephoto/service"
+  PHOTO_HOST = "http://media.ed.edmunds-media.com"
 
   def self.list_of_auto_makes(options)
     options[:params][:year] = "1800" if options[:params][:year] == ""
@@ -47,6 +49,14 @@ module Edmunds
       :engine_code => style_data["engine"]["code"],
       :transmission_type => style_data["transmission"]["transmissionType"]
     }
+  end
+
+  def self.auto_show_picture(view="FQ", width="500", options)
+    raw_pic_data = RestClient.get(BASE_URI + PHOTO_V1 + "/findphotosbystyleid", options)
+    pic_data = JSON.parse(raw_pic_data)
+    pics_view = pic_data.find { |pic| pic["shotTypeAbbreviation"] == view }
+    pic_url = pics_view["photoSrcs"].find { |url| (Regexp.new "_#{width}.jpg") =~ url }
+    PHOTO_HOST + pic_url
   end
 
 end
