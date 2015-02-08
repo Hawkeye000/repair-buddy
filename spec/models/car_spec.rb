@@ -22,6 +22,44 @@ RSpec.describe Car, :type => :model do
     end
   end
 
+  describe "fixed (dependent) data columns" do
+    # these columns are filled in by interacting with the
+    # edmunds api and are not set by the user
+    it { should respond_to :engine_code }
+    it { should respond_to :transmission_type }
+    it { should respond_to :photo_url }
+    it { should respond_to :model_year_id }
+
+    let(:car) { create(:car) }
+
+    describe "car#get_style_details" do
+      before do
+        VCR.use_cassette "car_default_get_style_details" do
+          car.get_style_details
+        end
+      end
+      it "adds an engine code" do
+        expect(car.engine_code).to eq("4INAG1.7")
+      end
+      it "adds a transmission type" do
+        expect(car.transmission_type).to eq("MANUAL")
+      end
+      it "adds a model year id" do
+        expect(car.model_year_id).to eq(100503590)
+      end
+    end
+    describe "car#get_photo_url" do
+      before do
+        VCR.use_cassette "car_default_get_photo_url" do
+          car.get_photo_url
+        end
+      end
+      it "adds a photo url" do
+        expect(car.photo_url).to include("/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_3_500.jpg")
+      end
+    end
+  end
+
   describe "factories" do
     it "should have a valid factory" do
       expect(build(:car)).to be_valid

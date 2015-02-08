@@ -24,4 +24,16 @@ class Car < ActiveRecord::Base
     miles_delta/date_delta * DAYS_PER[interval]
   end
 
+  def get_style_details
+    style_details = Edmunds.auto_style_details(self.edmunds_id, params:{ api_key:Rails.application.secrets.edmunds_api_key })
+    self.assign_attributes (style_details)
+  end
+
+  def get_photo_url
+    photo_url = Edmunds.auto_show_picture(params:{
+        api_key:Rails.application.secrets.edmunds_api_key,
+        styleId:self.edmunds_id })
+    self.photo_url = photo_url
+  end
+
 end
