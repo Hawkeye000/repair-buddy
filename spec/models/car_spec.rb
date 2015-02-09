@@ -47,6 +47,7 @@ RSpec.describe Car, :type => :model do
       it "adds a model year id" do
         expect(car.model_year_id).to eq(100503590)
       end
+
     end
     describe "car#get_photo_url" do
       before do

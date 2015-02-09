@@ -1,5 +1,7 @@
 class CarsController < ApplicationController
 
+  before_filter :set_car, only:[:show, :destroy]
+
   def show
   end
 
@@ -26,6 +28,8 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     authorize @car
+    @car.get_style_details
+    @car.get_photo_url
     if @car.save
       redirect_to user_cars_path(@car.user.id)
     else
@@ -34,7 +38,6 @@ class CarsController < ApplicationController
   end
 
   def destroy
-    @car = Car.find(params[:id])
     authorize @car
     if @car.destroy
       redirect_to user_cars_path unless request.xhr?
@@ -44,6 +47,10 @@ class CarsController < ApplicationController
   end
 
   private
+
+    def set_car
+      @car = Car.find(params[:id])
+    end
 
     def car_params
       params.require(:car).permit(:user_id, :make, :model, :year, :trim, :edmunds_id)

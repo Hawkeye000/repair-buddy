@@ -40,7 +40,27 @@ RSpec.describe CarsController, :type => :controller do
         expect(response).to redirect_to user_cars_path(other_user.id)
       end
     end
+  end
 
+  describe 'GET#show' do
+    context "user signed in" do
+      let(:car) { create(:car) }
+      before do
+        sign_in user
+        VCR.use_cassette 'get_show_car_details' do
+          car.get_style_details
+          car.get_photo_url
+        end
+        car.save!
+        get :show, user_id:user, id:car
+      end
+      it "assigns the car to @car" do
+        expect(assigns(:car)).to eq(car)
+      end
+      it "renders the show view" do
+        expect(response).to render_template :show
+      end
+    end
   end
 
   describe 'GET#new' do
@@ -69,22 +89,42 @@ RSpec.describe CarsController, :type => :controller do
       context "valid parameters" do
         it "saves the car in a database" do
           expect {
-            post :create, user_id:user.id, car: attributes_for(:car)
+            VCR.use_cassette 'create_car' do
+              post :create, user_id:user.id, car: attributes_for(:car)
+            end
           }.to change(Car, :count).by(1)
         end
+
+        before do
+          VCR.use_cassette 'create_car' do
+            post :create, user_id:user.id, car: attributes_for(:car)
+          end
+        end
         it "associates the car with the user" do
-          post :create, user_id:user.id, car: attributes_for(:car)
           expect(user.cars.first.edmunds_id).to eq(build(:car).edmunds_id)
         end
         it "redirects to the 'Garage'" do
-          post :create, user_id:user.id, car: attributes_for(:car)
           expect(response).to redirect_to user_cars_path(user.id)
+        end
+        it "has a photo url" do
+          expect(Car.last.photo_url).to_not be_nil
+        end
+        it "has a model year id" do
+          expect(Car.last.model_year_id).to_not be_nil
+        end
+        it "has a transmission type" do
+          expect(Car.last.transmission_type).to_not be_nil
+        end
+        it "has an engine code" do
+          expect(Car.last.transmission_type).to_not be_nil
         end
       end
       context "invalid parameters" do
         it "does not save the car in a database" do
           expect {
-            post :create, user_id:user.id, car: attributes_for(:invalid_car)
+            VCR.use_cassette 'create_invalid_car' do
+              post :create, user_id:user.id, car: attributes_for(:invalid_car)
+            end
           }.to_not change(Car, :count)
         end
       end
@@ -94,7 +134,9 @@ RSpec.describe CarsController, :type => :controller do
         end
         it "does not save the car in a database" do
           expect {
-            post :create, user_id:user.id, car: attributes_for(:invalid_car)
+            VCR.use_cassette 'create_invalid_car' do
+              post :create, user_id:user.id, car: attributes_for(:invalid_car)
+            end
           }.to_not change(Car, :count)
         end
       end

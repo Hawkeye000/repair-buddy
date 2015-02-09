@@ -1,22 +1,23 @@
 require 'rails_helper'
 
-describe "cars" do
+describe "cars features" do
 
+  #let functions did not work for this spec, thus the older instance variable method is used instead
   #let(:user) { create(:user) }
   #let(:car1) { create(:car, make:"Honda", model:"Civic", year:2015, trim:"EX", user_id:user.id) }
   #let(:car2) { create(:car, make:"Acura", model:"TSX", year:2014, trim:"XL", user_id:user.id) }
 
+  before do
+    @user = create(:user)
+    @car1 = create(:car, make:"Acura", model:"TSX", year:2014, trim:"XL", user_id:@user.id)
+    @car2 = create(:car, make:"Honda", model:"Civic", year:2015, trim:"EX", user_id:@user.id)
+
+    login_as @user, scope: :user
+    visit '/'
+    click_link("Garage")
+  end
+
   describe "the garage view (cars#index)" do
-    before do
-      @user = create(:user)
-      @car1 = create(:car, make:"Acura", model:"TSX", year:2014, trim:"XL", user_id:@user.id)
-      @car2 = create(:car, make:"Honda", model:"Civic", year:2015, trim:"EX", user_id:@user.id)
-
-      login_as @user, scope: :user
-      visit '/'
-      click_link("Garage")
-    end
-
     it "should have a link to the show page for each of the user's cars" do
       expect(page).to have_link("#{@car1.year} #{@car1.make} #{@car1.model}", href:user_car_path(@user.id, @car1.id))
       expect(page).to have_link("#{@car2.year} #{@car2.make} #{@car2.model}", href:user_car_path(@user.id, @car2.id))
@@ -42,6 +43,18 @@ describe "cars" do
         expect(page).to_not have_content("#{@car1.year} #{@car1.make} #{@car1.model}")
         expect(page).to have_content("#{@car2.year} #{@car2.make} #{@car2.model}")
       end
+    end
+  end
+
+  describe "the show view (cars#show)" do
+    it "has an image of the car" do
+      VCR.use_cassette 'add_details_to_car1' do
+        @car1.get_style_details
+        @car1.get_photo_url
+        @car1.save!
+      end
+      click_link("#{@car1.year} #{@car1.make} #{@car1.model}")
+      expect(page).to have_xpath("//img[@src=\"#{@car1.photo_url}\"]")
     end
   end
 
