@@ -9,7 +9,9 @@ describe "cars features" do
 
   before do
     @user = create(:user)
-    @car1 = create(:car, make:"Acura", model:"TSX", year:2014, trim:"XL", user_id:@user.id)
+    @car1 = create(:car, make:"Acura", model:"TSX", year:2014,
+                    trim:"Special Edition 4dr Sedan (2.4L 4cyl 5A)",
+                    edmunds_id:200490520, user_id:@user.id)
     @car2 = create(:car, make:"Honda", model:"Civic", year:2015, trim:"EX", user_id:@user.id)
 
     login_as @user, scope: :user
@@ -47,14 +49,22 @@ describe "cars features" do
   end
 
   describe "the show view (cars#show)" do
-    it "has an image of the car" do
+    before do
       VCR.use_cassette 'add_details_to_car1' do
         @car1.get_style_details
         @car1.get_photo_url
         @car1.save!
       end
       click_link("#{@car1.year} #{@car1.make} #{@car1.model}")
+    end
+    it "has an image of the car" do
       expect(page).to have_xpath("//img[@src=\"#{@car1.photo_url}\"]")
+    end
+    it "has the car Year Make Model" do
+      expect(page).to have_content("#{@car1.year} #{@car1.make} #{@car1.model}")
+    end
+    it "has the trim name" do
+      expect(page).to have_content(@car1.trim)
     end
   end
 
