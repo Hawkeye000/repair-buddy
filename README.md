@@ -18,8 +18,10 @@ $ rails server
 
 External Edmunds API
 --------------------
-This application replies on external access to the Edmunds API.  Sign up for an API key at http://developer.edmunds.com/.  
-Set the environment variables EDMUNDS_API_KEY and EDMUNDS_SECRET for the development environment with the API key provided by Edmunds.com.
+This application relies on external access to the Edmunds API.  Sign up for an API key at http://developer.edmunds.com/.  
+
+Set the environment variables "EDMUNDS_API_KEY" and "EDMUNDS_SECRET" for the development environment with the API key provided by Edmunds.
+
 Feature tests and all controllers prefixed with 'edmunds' require this setup to work.
 
 Testing
@@ -31,4 +33,4 @@ $ rspec spec/
 
 Deployment and Production
 -------------------------
-This application is not yet setup for production and deployemnt.
+This application is not yet setup for production and deployment.
