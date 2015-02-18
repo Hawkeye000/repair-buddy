@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-77.mashery.com
+      - prod-j-worker-us-east-1b-52.mashery.com
       Content-Length:
       - '33169'
       Connection:
@@ -107,5 +107,139 @@ http_interactions:
         Spyder","niceName":"mr2-spyder","years":[{"id":100503654,"year":2004}]},{"id":"Toyota_Matrix","name":"Matrix","niceName":"matrix","years":[{"id":100503164,"year":2004}]},{"id":"Toyota_Prius","name":"Prius","niceName":"prius","years":[{"id":100503270,"year":2004}]},{"id":"Toyota_RAV4","name":"RAV4","niceName":"rav4","years":[{"id":100503642,"year":2004}]},{"id":"Toyota_Sequoia","name":"Sequoia","niceName":"sequoia","years":[{"id":100503597,"year":2004}]},{"id":"Toyota_Sienna","name":"Sienna","niceName":"sienna","years":[{"id":100502952,"year":2004}]},{"id":"Toyota_Tacoma","name":"Tacoma","niceName":"tacoma","years":[{"id":100503633,"year":2004}]},{"id":"Toyota_Tundra","name":"Tundra","niceName":"tundra","years":[{"id":100503103,"year":2004}]}]},{"id":200000238,"name":"Volkswagen","niceName":"volkswagen","models":[{"id":"Volkswagen_GTI","name":"GTI","niceName":"gti","years":[{"id":100503320,"year":2004}]},{"id":"Volkswagen_Golf","name":"Golf","niceName":"golf","years":[{"id":100503321,"year":2004}]},{"id":"Volkswagen_Jetta","name":"Jetta","niceName":"jetta","years":[{"id":100503322,"year":2004}]},{"id":"Volkswagen_New_Beetle","name":"New
         Beetle","niceName":"new-beetle","years":[{"id":100503323,"year":2004}]},{"id":"Volkswagen_Passat","name":"Passat","niceName":"passat","years":[{"id":100503324,"year":2004}]},{"id":"Volkswagen_Phaeton","name":"Phaeton","niceName":"phaeton","years":[{"id":100502680,"year":2004}]},{"id":"Volkswagen_R32","name":"R32","niceName":"r32","years":[{"id":100502982,"year":2004}]},{"id":"Volkswagen_Touareg","name":"Touareg","niceName":"touareg","years":[{"id":100502679,"year":2004}]}]},{"id":200010382,"name":"Volvo","niceName":"volvo","models":[{"id":"Volvo_C70","name":"C70","niceName":"c70","years":[{"id":100503229,"year":2004}]},{"id":"Volvo_S40","name":"S40","niceName":"s40","years":[{"id":100502996,"year":2004}]},{"id":"Volvo_S60","name":"S60","niceName":"s60","years":[{"id":100502955,"year":2004}]},{"id":"Volvo_S80","name":"S80","niceName":"s80","years":[{"id":100503231,"year":2004}]},{"id":"Volvo_V40","name":"V40","niceName":"v40","years":[{"id":100503230,"year":2004}]},{"id":"Volvo_V70","name":"V70","niceName":"v70","years":[{"id":100502956,"year":2004}]},{"id":"Volvo_XC70","name":"XC70","niceName":"xc70","years":[{"id":100503227,"year":2004}]},{"id":"Volvo_XC90","name":"XC90","niceName":"xc90","years":[{"id":100503228,"year":2004}]}]}],"makesCount":47}'
     http_version: 
-  recorded_at: Tue, 17 Feb 2015 23:49:05 GMT
+  recorded_at: Tue, 17 Feb 2015 23:49:32 GMT
+- request:
+    method: get
+    uri: https://api.edmunds.com/api/vehicle/v2/honda?api_key=<EDMUNDS_API_KEY>&year=2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 17 Feb 2015 21:35:15 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - EnvironmentID=5b780143e5171833995c97931f48a00e;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
+      X-Environment:
+      - Prod-2
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-72.mashery.com
+      X-Session:
+      - 5b780143e5171833995c97931f48a00e
+      Content-Length:
+      - '831'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":200001444,"name":"Honda","niceName":"honda","models":[{"id":"Honda_Accord","name":"Accord","niceName":"accord","years":[{"id":100503589,"year":2004}]},{"id":"Honda_CR_V","name":"CR-V","niceName":"cr-v","years":[{"id":100503591,"year":2004}]},{"id":"Honda_Civic","name":"Civic","niceName":"civic","years":[{"id":100503590,"year":2004}]},{"id":"Honda_Element","name":"Element","niceName":"element","years":[{"id":100503592,"year":2004}]},{"id":"Honda_Insight","name":"Insight","niceName":"insight","years":[{"id":100503593,"year":2004}]},{"id":"Honda_Odyssey","name":"Odyssey","niceName":"odyssey","years":[{"id":100503594,"year":2004}]},{"id":"Honda_Pilot","name":"Pilot","niceName":"pilot","years":[{"id":100503595,"year":2004}]},{"id":"Honda_S2000","name":"S2000","niceName":"s2000","years":[{"id":100503596,"year":2004}]}]}'
+    http_version: 
+  recorded_at: Tue, 17 Feb 2015 23:49:33 GMT
+- request:
+    method: get
+    uri: https://api.edmunds.com/api/vehicle/v2/honda/civic/2004?api_key=<EDMUNDS_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 17 Feb 2015 21:35:18 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - EnvironmentID=1c0637092d7bb3fde2bea72a4bd99a48;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
+      X-Environment:
+      - Prod-2
+      X-Mashery-Responder:
+      - prod-j-worker-us-east-1e-74.mashery.com
+      X-Session:
+      - 1c0637092d7bb3fde2bea72a4bd99a48
+      Content-Length:
+      - '4971'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":100503590,"year":2004,"styles":[{"id":100344093,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100344090,"name":"EX 2dr
+        Coupe w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344089,"name":"EX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344092,"name":"Hybrid
+        4dr Sedan (1.3L 4cyl gas/electric hybrid 5M)","submodel":{"body":"Sedan","fuel":"Hybrid","modelName":"Civic
+        Hybrid","niceName":"hybrid"},"trim":"Hybrid"},{"id":100344091,"name":"EX 2dr
+        Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344086,"name":"LX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344085,"name":"LX 2dr Coupe
+        (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344088,"name":"EX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"EX"},{"id":100344087,"name":"LX
+        2dr Coupe w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344082,"name":"HX 2dr Coupe
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100374218,"name":"Si 2dr Hatchback
+        (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100344081,"name":"HX
+        2dr Coupe (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"HX"},{"id":100374219,"name":"Si
+        2dr Hatchback w/Side Airbags (2.0L 4cyl 5M)","submodel":{"body":"Hatchback","modelName":"Civic
+        Hatchback","niceName":"hatchback"},"trim":"Si"},{"id":100344084,"name":"LX
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"LX"},{"id":100344083,"name":"HX
+        2dr Coupe w/Side Airbags (1.7L 4cyl CVT)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100344077,"name":"Value Package
+        2dr Coupe (1.7L 4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"Value
+        Package"},{"id":100344078,"name":"Value Package 2dr Coupe w/Side Airbags (1.7L
+        4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"Value
+        Package"},{"id":100344079,"name":"Value Package 2dr Coupe w/Side Airbags (1.7L
+        4cyl 4A)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"Value
+        Package"},{"id":100344080,"name":"HX 2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic
+        Coupe","niceName":"coupe"},"trim":"HX"},{"id":100344073,"name":"EX 4dr Sedan
+        (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344074,"name":"EX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344075,"name":"EX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344076,"name":"Value Package
+        2dr Coupe (1.7L 4cyl 5M)","submodel":{"body":"Coupe","modelName":"Civic Coupe","niceName":"coupe"},"trim":"Value
+        Package"},{"id":100344069,"name":"LX 4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344070,"name":"LX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344071,"name":"LX 4dr Sedan
+        w/Side Airbags (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344072,"name":"EX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"EX"},{"id":100344065,"name":"DX
+        4dr Sedan w/Side Airbags (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"DX"},{"id":100344066,"name":"Value Package
+        4dr Sedan (1.7L 4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"Value
+        Package"},{"id":100344067,"name":"Value Package 4dr Sedan w/Side Airbags (1.7L
+        4cyl 4A)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"Value
+        Package"},{"id":100344068,"name":"LX 4dr Sedan (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic
+        Sedan","niceName":"sedan"},"trim":"LX"},{"id":100344064,"name":"DX 4dr Sedan
+        (1.7L 4cyl 5M)","submodel":{"body":"Sedan","modelName":"Civic Sedan","niceName":"sedan"},"trim":"DX"}]}'
+    http_version: 
+  recorded_at: Tue, 17 Feb 2015 23:49:35 GMT
 recorded_with: VCR 2.9.3

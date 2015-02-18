@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1b-77.mashery.com
+      - prod-j-worker-us-east-1d-66.mashery.com
       Content-Length:
       - '33169'
       Connection:
@@ -107,5 +107,5 @@ http_interactions:
         Spyder","niceName":"mr2-spyder","years":[{"id":100503654,"year":2004}]},{"id":"Toyota_Matrix","name":"Matrix","niceName":"matrix","years":[{"id":100503164,"year":2004}]},{"id":"Toyota_Prius","name":"Prius","niceName":"prius","years":[{"id":100503270,"year":2004}]},{"id":"Toyota_RAV4","name":"RAV4","niceName":"rav4","years":[{"id":100503642,"year":2004}]},{"id":"Toyota_Sequoia","name":"Sequoia","niceName":"sequoia","years":[{"id":100503597,"year":2004}]},{"id":"Toyota_Sienna","name":"Sienna","niceName":"sienna","years":[{"id":100502952,"year":2004}]},{"id":"Toyota_Tacoma","name":"Tacoma","niceName":"tacoma","years":[{"id":100503633,"year":2004}]},{"id":"Toyota_Tundra","name":"Tundra","niceName":"tundra","years":[{"id":100503103,"year":2004}]}]},{"id":200000238,"name":"Volkswagen","niceName":"volkswagen","models":[{"id":"Volkswagen_GTI","name":"GTI","niceName":"gti","years":[{"id":100503320,"year":2004}]},{"id":"Volkswagen_Golf","name":"Golf","niceName":"golf","years":[{"id":100503321,"year":2004}]},{"id":"Volkswagen_Jetta","name":"Jetta","niceName":"jetta","years":[{"id":100503322,"year":2004}]},{"id":"Volkswagen_New_Beetle","name":"New
         Beetle","niceName":"new-beetle","years":[{"id":100503323,"year":2004}]},{"id":"Volkswagen_Passat","name":"Passat","niceName":"passat","years":[{"id":100503324,"year":2004}]},{"id":"Volkswagen_Phaeton","name":"Phaeton","niceName":"phaeton","years":[{"id":100502680,"year":2004}]},{"id":"Volkswagen_R32","name":"R32","niceName":"r32","years":[{"id":100502982,"year":2004}]},{"id":"Volkswagen_Touareg","name":"Touareg","niceName":"touareg","years":[{"id":100502679,"year":2004}]}]},{"id":200010382,"name":"Volvo","niceName":"volvo","models":[{"id":"Volvo_C70","name":"C70","niceName":"c70","years":[{"id":100503229,"year":2004}]},{"id":"Volvo_S40","name":"S40","niceName":"s40","years":[{"id":100502996,"year":2004}]},{"id":"Volvo_S60","name":"S60","niceName":"s60","years":[{"id":100502955,"year":2004}]},{"id":"Volvo_S80","name":"S80","niceName":"s80","years":[{"id":100503231,"year":2004}]},{"id":"Volvo_V40","name":"V40","niceName":"v40","years":[{"id":100503230,"year":2004}]},{"id":"Volvo_V70","name":"V70","niceName":"v70","years":[{"id":100502956,"year":2004}]},{"id":"Volvo_XC70","name":"XC70","niceName":"xc70","years":[{"id":100503227,"year":2004}]},{"id":"Volvo_XC90","name":"XC90","niceName":"xc90","years":[{"id":100503228,"year":2004}]}]}],"makesCount":47}'
     http_version: 
-  recorded_at: Tue, 17 Feb 2015 23:49:05 GMT
+  recorded_at: Tue, 17 Feb 2015 23:48:58 GMT
 recorded_with: VCR 2.9.3

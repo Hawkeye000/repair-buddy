@@ -66,6 +66,11 @@ describe "cars features" do
     it "has the trim name" do
       expect(page).to have_content(@car1.trim)
     end
+    it "has the last mileage recorded with delimiter" do
+      @record = create(:record, mileage:100000, car_id:@car1.id, user_id:@user.id)
+      visit current_path
+      expect(page).to have_content "100,000"
+    end
   end
 
   after do |example|

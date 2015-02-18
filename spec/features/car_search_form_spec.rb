@@ -22,12 +22,10 @@ describe "car searching with parameters", vcr:true do
       expect(page).to have_css('select#car_trim[disabled=disabled]')
     end
 
-    describe "selecting a year" do
+    describe "selecting a year", :vcr do
 
       before do
-        VCR.use_cassette('edmunds_makes_from_2004') do
-          select "2004", from:"car_year"
-        end
+        select "2004", from:"car_year"
       end
 
       it "should enable the select tag 'Make' after selecting a year", js:true do
@@ -38,18 +36,16 @@ describe "car searching with parameters", vcr:true do
         expect(page).to have_selector('select#car_make option', count:48)
       end
 
-      context "default reselected" do
+      context "default reselected", :vcr do
         before { select "Select Year...", from:"car_year" }
         it "should disable the select tag 'Make'", js:true do
           expect(page).to have_css('select#car_make[disabled=disabled]')
         end
       end
 
-      describe "selecting a make" do
+      describe "selecting a make", :vcr do
         before do
-          VCR.use_cassette('edmunds_models_2004_honda') do
-            select "Honda", from:"car_make"
-          end
+          select "Honda", from:"car_make"
         end
 
         it "should enable the select tag 'Model' after selecting a make", js:true do
@@ -63,18 +59,16 @@ describe "car searching with parameters", vcr:true do
           expect(page).to have_css('select#car_model option', text:'Civic')
         end
 
-        context "default reselected" do
+        context "default reselected", :vcr do
           before { select "Select Make...", from:"car_make" }
           it "should disable the select tag 'Model'", js:true do
             expect(page).to have_css('select#car_model[disabled=disabled]')
           end
         end
 
-        describe "selecting a model" do
+        describe "selecting a model", :vcr do
           before do
-            VCR.use_cassette('edmunds_styles_2004_honda_civic') do
-              select "Civic", from:"car_model"
-            end
+            select "Civic", from:"car_model"
           end
 
           it "should enable the select tag 'Trim'", js:true do
@@ -88,18 +82,16 @@ describe "car searching with parameters", vcr:true do
             expect(page).to have_css('select#car_trim option', text:'Hybrid 4dr Sedan (1.3L 4cyl gas/electric hybrid CVT)')
           end
 
-          context "default reselected" do
+          context "default reselected", :vcr do
             before { select "Select Model...", from:"car_model" }
             it "should disable the select tag 'Trim'", js:true do
               expect(page).to have_css('select#car_trim[disabled=disabled]')
             end
           end
 
-          describe "selecting a trim" do
+          describe "selecting a trim", :vcr do
             before do
-              VCR.use_cassette('edmunds_styles_2004_honda_civic_with_trim') do
-                select "EX 4dr Sedan (1.7L 4cyl 5M)", from:"car_trim"
-              end
+              select "EX 4dr Sedan (1.7L 4cyl 5M)", from:"car_trim"
             end
             it "should enable the 'add-to-garage' button", js:true do
               expect(page).to_not have_css('#add-to-garage[disabled=disabled]')
@@ -108,7 +100,7 @@ describe "car searching with parameters", vcr:true do
               expect(page.find('#trim_name', visible:false).value).to eq("EX 4dr Sedan (1.7L 4cyl 5M)")
             end
 
-            context "default reslected" do
+            context "default reslected", :vcr do
               before { select "Select Trim...", from:"car_trim" }
               it "should disable the add-to-garage button", js:true do
                 expect(page).to have_css('#params-add-to-garage[disabled=disabled]')

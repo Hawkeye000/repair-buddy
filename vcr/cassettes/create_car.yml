@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 08 Feb 2015 23:17:10 GMT
+      - Tue, 17 Feb 2015 21:35:23 GMT
       Server:
       - Apache-Coyote/1.1
       Set-Cookie:
-      - EnvironmentID=16d4dfa368fcbe75d97bcafed1503500;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
+      - EnvironmentID=e83f4baaa8f56fb71595b434ea1c67fd;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
       X-Environment:
       - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-72.mashery.com
+      - prod-j-worker-us-east-1e-71.mashery.com
       X-Session:
-      - 16d4dfa368fcbe75d97bcafed1503500
+      - e83f4baaa8f56fb71595b434ea1c67fd
       Content-Length:
       - '3368'
       Connection:
@@ -40,24 +40,24 @@ http_interactions:
       encoding: UTF-8
       string: '{"make":{"id":200001444,"name":"Honda","niceName":"honda"},"model":{"id":"Honda_Civic","name":"Civic","niceName":"civic"},"engine":{"id":"200252420","name":"Engine","equipmentType":"ENGINE","compressionRatio":9.9,"cylinder":4,"size":1.7,"displacement":1668.0,"configuration":"inline","fuelType":"regular
         unleaded","horsepower":127,"torque":114,"totalValves":16,"type":"gas","code":"4INAG1.7","compressorType":"NA"},"transmission":{"id":"200252421","name":"5M","equipmentType":"TRANSMISSION","transmissionType":"MANUAL","numberOfSpeeds":"5"},"drivenWheels":"front
-        wheel drive","numOfDoors":"4","options":[],"colors":[{"category":"Interior","options":[{"id":"200252237","name":"Ivory","equipmentType":"COLOR","manufactureOptionName":"Ivory","manufactureOptionCode":"IV","colorChips":{"primary":{"r":183,"g":174,"b":155,"hex":"B7AE9B"}},"fabricTypes":[]},{"id":"200252236","name":"Gray","equipmentType":"COLOR","manufactureOptionName":"Gray","manufactureOptionCode":"GR","colorChips":{"primary":{"r":134,"g":143,"b":142,"hex":"868F8E"}},"fabricTypes":[]}]},{"category":"Exterior","options":[{"id":"200252240","name":"Radiant
-        Ruby Pearl","equipmentType":"COLOR","manufactureOptionName":"Radiant Ruby
-        Pearl","manufactureOptionCode":"R-518P","colorChips":{"primary":{"r":204,"g":0,"b":0,"hex":"CC0000"}},"fabricTypes":[]},{"id":"200252241","name":"Shoreline
-        Mist Metallic","equipmentType":"COLOR","manufactureOptionName":"Shoreline
-        Mist Metallic","manufactureOptionCode":"YR-528M","colorChips":{"primary":{"r":214,"g":199,"b":180,"hex":"D6C7B4"}},"fabricTypes":[]},{"id":"200252238","name":"Taffeta
-        White","equipmentType":"COLOR","manufactureOptionName":"Taffeta White","manufactureOptionCode":"NH-578","colorChips":{"primary":{"r":234,"g":234,"b":234,"hex":"EAEAEA"}},"fabricTypes":[]},{"id":"200252244","name":"Magnesium
-        Metallic","equipmentType":"COLOR","manufactureOptionName":"Magnesium Metallic","manufactureOptionCode":"NH-675M","colorChips":{"primary":{"r":107,"g":112,"b":108,"hex":"6B706C"}},"fabricTypes":[]},{"id":"200252239","name":"Satin
+        wheel drive","numOfDoors":"4","options":[],"colors":[{"category":"Interior","options":[{"id":"200252236","name":"Gray","equipmentType":"COLOR","manufactureOptionName":"Gray","manufactureOptionCode":"GR","colorChips":{"primary":{"r":134,"g":143,"b":142,"hex":"868F8E"}},"fabricTypes":[]},{"id":"200252237","name":"Ivory","equipmentType":"COLOR","manufactureOptionName":"Ivory","manufactureOptionCode":"IV","colorChips":{"primary":{"r":183,"g":174,"b":155,"hex":"B7AE9B"}},"fabricTypes":[]}]},{"category":"Exterior","options":[{"id":"200252239","name":"Satin
         Silver Metallic","equipmentType":"COLOR","manufactureOptionName":"Satin Silver
-        Metallic","manufactureOptionCode":"NH-623M","colorChips":{"primary":{"r":131,"g":133,"b":138,"hex":"83858A"}},"fabricTypes":[]},{"id":"200252232","name":"Nighthawk
+        Metallic","manufactureOptionCode":"NH-623M","colorChips":{"primary":{"r":131,"g":133,"b":138,"hex":"83858A"}},"fabricTypes":[]},{"id":"200252240","name":"Radiant
+        Ruby Pearl","equipmentType":"COLOR","manufactureOptionName":"Radiant Ruby
+        Pearl","manufactureOptionCode":"R-518P","colorChips":{"primary":{"r":204,"g":0,"b":0,"hex":"CC0000"}},"fabricTypes":[]},{"id":"200252232","name":"Nighthawk
         Black Pearl","equipmentType":"COLOR","manufactureOptionName":"Nighthawk Black
-        Pearl","manufactureOptionCode":"B-92P","colorChips":{"primary":{"r":15,"g":15,"b":18,"hex":"0F0F12"}},"fabricTypes":[]},{"id":"200252233","name":"Eternal
+        Pearl","manufactureOptionCode":"B-92P","colorChips":{"primary":{"r":15,"g":15,"b":18,"hex":"0F0F12"}},"fabricTypes":[]},{"id":"200252238","name":"Taffeta
+        White","equipmentType":"COLOR","manufactureOptionName":"Taffeta White","manufactureOptionCode":"NH-578","colorChips":{"primary":{"r":234,"g":234,"b":234,"hex":"EAEAEA"}},"fabricTypes":[]},{"id":"200252241","name":"Shoreline
+        Mist Metallic","equipmentType":"COLOR","manufactureOptionName":"Shoreline
+        Mist Metallic","manufactureOptionCode":"YR-528M","colorChips":{"primary":{"r":214,"g":199,"b":180,"hex":"D6C7B4"}},"fabricTypes":[]},{"id":"200252244","name":"Magnesium
+        Metallic","equipmentType":"COLOR","manufactureOptionName":"Magnesium Metallic","manufactureOptionCode":"NH-675M","colorChips":{"primary":{"r":107,"g":112,"b":108,"hex":"6B706C"}},"fabricTypes":[]},{"id":"200252233","name":"Eternal
         Blue Pearl","equipmentType":"COLOR","manufactureOptionName":"Eternal Blue
-        Pearl","manufactureOptionCode":"B-96P","colorChips":{"primary":{"r":45,"g":46,"b":98,"hex":"2D2E62"}},"fabricTypes":[]}]}],"manufacturerCode":"ES2574MW","price":{"baseMSRP":17260.0,"baseInvoice":15775.0,"deliveryCharges":490.0,"usedTmvRetail":5828.0,"usedPrivateParty":4451.0,"usedTradeIn":3626.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"N/A","EPAClass":"Subcompact
+        Pearl","manufactureOptionCode":"B-96P","colorChips":{"primary":{"r":45,"g":46,"b":98,"hex":"2D2E62"}},"fabricTypes":[]}]}],"manufacturerCode":"ES2574MW","price":{"baseMSRP":17260.0,"baseInvoice":15775.0,"deliveryCharges":490.0,"usedTmvRetail":5822.0,"usedPrivateParty":4447.0,"usedTradeIn":3622.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"N/A","EPAClass":"Subcompact
         Cars","vehicleSize":"Compact","primaryBodyType":"Car","vehicleStyle":"Sedan","vehicleType":"Car"},"id":100344072,"name":"EX
         4dr Sedan (1.7L 4cyl 5M)","year":{"id":100503590,"year":2004},"submodel":{"body":"Sedan","modelName":"Civic
-        Sedan","niceName":"sedan"},"trim":"EX","states":["USED"],"squishVins":["2HGES2574H","1HGES2574L","JHMES2574S"],"MPG":{"highway":"34","city":"27"}}'
+        Sedan","niceName":"sedan"},"trim":"EX","states":["USED"],"squishVins":["1HGES2574L","2HGES2574H","JHMES2574S"],"MPG":{"highway":"34","city":"27"}}'
     http_version: 
-  recorded_at: Mon, 09 Feb 2015 01:18:04 GMT
+  recorded_at: Tue, 17 Feb 2015 23:51:27 GMT
 - request:
     method: get
     uri: https://api.edmunds.com/v1/api/vehiclephoto/service/findphotosbystyleid?api_key=<EDMUNDS_API_KEY>&styleId=100344072
@@ -79,17 +79,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 08 Feb 2015 23:23:26 GMT
+      - Tue, 17 Feb 2015 21:35:24 GMT
       Server:
       - Apache-Coyote/1.1
       Set-Cookie:
-      - EnvironmentID=07c9dc86e0463d3259da06ef94b957a0;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
+      - EnvironmentID=23d2b3b36777608484c0d75ebd3a5dd4;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
       X-Environment:
       - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-73.mashery.com
+      - prod-j-worker-us-east-1d-68.mashery.com
       X-Session:
-      - 07c9dc86e0463d3259da06ef94b957a0
+      - 23d2b3b36777608484c0d75ebd3a5dd4
       Content-Length:
       - '20267'
       Connection:
@@ -124,5 +124,5 @@ http_interactions:
         Honda Motor Company, Inc."],"captionTranscript":"2004 Honda Civic EX Interior","type":"PHOTOS","subType":"interior","shotTypeAbbreviation":"I","photoSrcs":["/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_131.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_396.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_300.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_98.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_185.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_423.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_150.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_175.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_400.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_87.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_500.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_276.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_i_oem_1_196.jpg"],"source":"OEM","vdpOrder":3},{"children":[],"id":"dam/photo/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1","site":"dam","authorNames":["American
         Honda Motor Company, Inc."],"captionTranscript":"2004 Honda Civic EX 4dr Sedan","type":"PHOTOS","subType":"exterior","shotTypeAbbreviation":"FQ","photoSrcs":["/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_175.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_276.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_423.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_300.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_98.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_196.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_150.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_185.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_396.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_87.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_131.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_500.jpg","/honda/civic/2004/oem/2004_honda_civic_sedan_ex_fq_oem_1_400.jpg"],"source":"OEM","vdpOrder":1}]'
     http_version: 
-  recorded_at: Mon, 09 Feb 2015 01:18:07 GMT
+  recorded_at: Tue, 17 Feb 2015 23:51:27 GMT
 recorded_with: VCR 2.9.3

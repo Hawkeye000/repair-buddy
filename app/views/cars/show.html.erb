@@ -1,5 +1,13 @@
 <div class="row">
   <h1><%= "#{@car.year} #{@car.make} #{@car.model}" %></h1>
   <h2><%= @car.trim %></h2>
-  <%= image_tag @car.photo_url %>
+  <div class="col-xs-5">
+    <%= image_tag @car.photo_url, class:"img-rounded img-responsive" %>
+  </div>
+  <div class="col-xs-7">
+    <p>
+      <span class="label label-default">Last Recorded Mileage</span>
+      <%= number_with_delimiter @car.latest_mileage %>
+    </p>
+  </div>
 </div>

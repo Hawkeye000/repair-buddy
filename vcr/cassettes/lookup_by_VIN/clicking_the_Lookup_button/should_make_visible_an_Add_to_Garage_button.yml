@@ -21,17 +21,11 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 08 Feb 2015 21:49:55 GMT
+      - Tue, 17 Feb 2015 23:03:14 GMT
       Server:
       - Apache-Coyote/1.1
-      Set-Cookie:
-      - EnvironmentID=05a36da31f79f98266fad470f12ef82f;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
-      X-Environment:
-      - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-74.mashery.com
-      X-Session:
-      - 05a36da31f79f98266fad470f12ef82f
+      - prod-j-worker-us-east-1d-69.mashery.com
       Content-Length:
       - '2368'
       Connection:
@@ -50,10 +44,10 @@ http_interactions:
         only)","equipmentType":"OPTION","availability":"LT"}]},{"category":"Exterior","options":[{"id":"200381492","name":"Compact
         Spare Tire And Wheel","description":"Deletes tire sealant and inflator kit.","equipmentType":"OPTION","availability":"All
         Except SS"}]}],"colors":[{"category":"Interior","options":[{"id":"200381103","name":"Black","equipmentType":"COLOR","availability":"USED"}]},{"category":"Exterior","options":[{"id":"200381113","name":"Silver
-        Ice Metallic","equipmentType":"COLOR","availability":"USED"}]},{"category":"Roof","options":[{"id":"200381095","name":"Black","equipmentType":"COLOR","availability":"USED"}]}],"manufacturerCode":"1EH67","price":{"baseMSRP":34180.0,"baseInvoice":32813.0,"deliveryCharges":900.0,"usedTmvRetail":20557.0,"usedPrivateParty":19214.0,"usedTradeIn":17699.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"Performance","EPAClass":"Compact
+        Ice Metallic","equipmentType":"COLOR","availability":"USED"}]},{"category":"Roof","options":[{"id":"200381095","name":"Black","equipmentType":"COLOR","availability":"USED"}]}],"manufacturerCode":"1EH67","price":{"baseMSRP":34180.0,"baseInvoice":32813.0,"deliveryCharges":900.0,"usedTmvRetail":20609.0,"usedPrivateParty":19262.0,"usedTradeIn":17743.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"Performance","EPAClass":"Compact
         Cars","vehicleSize":"Midsize","primaryBodyType":"Car","vehicleStyle":"Convertible","vehicleType":"Car"},"vin":"2G1FC3D33C9165616","squishVin":"2G1FC3D3C9","years":[{"id":100531911,"year":2012,"styles":[{"id":101395591,"name":"LT
         2dr Convertible w/2LT (3.6L 6cyl 6M)","submodel":{"body":"Convertible","modelName":"Camaro
         Convertible","niceName":"convertible"},"trim":"LT"}]}],"matchingType":"SQUISHVIN","MPG":{"highway":"28","city":"17"}}'
     http_version: 
-  recorded_at: Sun, 08 Feb 2015 21:49:49 GMT
+  recorded_at: Tue, 17 Feb 2015 23:52:28 GMT
 recorded_with: VCR 2.9.3

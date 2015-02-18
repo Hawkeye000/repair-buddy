@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.edmunds.com/api/vehicle/v2/styles/101404908?api_key=kjyydh5s5ee2bc8d648s68tx&view=full
+    uri: https://api.edmunds.com/api/vehicle/v2/styles/101404908?api_key=<EDMUNDS_API_KEY>&view=full
     body:
       encoding: US-ASCII
       string: ''
@@ -21,18 +21,11 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 08 Feb 2015 21:22:21 GMT
+      - Tue, 17 Feb 2015 23:03:52 GMT
       Server:
       - Apache-Coyote/1.1
-      Set-Cookie:
-      - EnvironmentID=4c8ea00f90f2f76de9c08f86a832dfef;Max-Age=180;Path=/;Version=1;Domain=.edmunds-media.com;
-      - EnvironmentID=4c8ea00f90f2f76de9c08f86a832dfef;Max-Age=180;Path=/;Version=1;Domain=.edmunds.com;
-      X-Environment:
-      - Prod-2
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-72.mashery.com
-      X-Session:
-      - 4c8ea00f90f2f76de9c08f86a832dfef
+      - prod-j-worker-us-east-1e-71.mashery.com
       Content-Length:
       - '4013'
       Connection:
@@ -44,30 +37,29 @@ http_interactions:
         automatic","transmissionType":"AUTOMATIC","numberOfSpeeds":"6"},"drivenWheels":"rear
         wheel drive","numOfDoors":"2","options":[{"category":"Interior","options":[{"id":"200392042","name":"Smokers
         Pack","description":"Ashtray; Cigar lighter","equipmentType":"OPTION","price":{"baseMSRP":570.0,"estimateTmv":false},"manufactureOptionName":"Smokers
-        Pack","manufactureOptionCode":"--"},{"id":"200392031","name":"Bang & Olufsen
-        BeoSound Audio","equipmentType":"OPTION","price":{"baseMSRP":8330.0,"estimateTmv":false},"manufactureOptionName":"Bang
-        & Olufsen BeoSound Audio","manufactureOptionCode":"--"},{"id":"200392035","name":"Second
-        Glass Key","description":"Additional key fob constructed of stainless steel
-        and sapphire","equipmentType":"OPTION","price":{"baseMSRP":750.0,"estimateTmv":false},"manufactureOptionName":"Second
+        Pack","manufactureOptionCode":"--"},{"id":"200392035","name":"Second Glass
+        Key","description":"Additional key fob constructed of stainless steel and
+        sapphire","equipmentType":"OPTION","price":{"baseMSRP":750.0,"estimateTmv":false},"manufactureOptionName":"Second
         Glass Key","manufactureOptionCode":"--"},{"id":"200392053","name":"Leather
         Key Fob Pouch","equipmentType":"OPTION","price":{"baseMSRP":73.0,"estimateTmv":false},"manufactureOptionName":"Leather
-        Key Fob Pouch","manufactureOptionCode":"--"}]},{"category":"Safety","options":[{"id":"200392041","name":"Alarm
-        Upgrade","description":"Alarm upgrade featuring a volumetric sensor and a
-        tilt sensor","equipmentType":"OPTION","price":{"baseMSRP":450.0,"estimateTmv":false},"manufactureOptionName":"Alarm
-        Upgrade","manufactureOptionCode":"--"},{"id":"200392040","name":"First Aid
-        Kit","equipmentType":"OPTION","price":{"baseMSRP":145.0,"estimateTmv":false},"manufactureOptionName":"First
-        Aid Kit","manufactureOptionCode":"--"}]},{"category":"Exterior","options":[{"id":"200392046","name":"Front
+        Key Fob Pouch","manufactureOptionCode":"--"},{"id":"200392031","name":"Bang
+        & Olufsen BeoSound Audio","equipmentType":"OPTION","price":{"baseMSRP":8330.0,"estimateTmv":false},"manufactureOptionName":"Bang
+        & Olufsen BeoSound Audio","manufactureOptionCode":"--"}]},{"category":"Safety","options":[{"id":"200392040","name":"First
+        Aid Kit","equipmentType":"OPTION","price":{"baseMSRP":145.0,"estimateTmv":false},"manufactureOptionName":"First
+        Aid Kit","manufactureOptionCode":"--"},{"id":"200392041","name":"Alarm Upgrade","description":"Alarm
+        upgrade featuring a volumetric sensor and a tilt sensor","equipmentType":"OPTION","price":{"baseMSRP":450.0,"estimateTmv":false},"manufactureOptionName":"Alarm
+        Upgrade","manufactureOptionCode":"--"}]},{"category":"Exterior","options":[{"id":"200392046","name":"Front
         Wheel Stone Guards","equipmentType":"OPTION","price":{"baseMSRP":295.0,"estimateTmv":false},"manufactureOptionName":"Front
         Wheel Stone Guards","manufactureOptionCode":"--"}]}],"colors":[{"category":"Interior","options":[{"id":"200392029","name":"Metallic
         Bronze","equipmentType":"COLOR","manufactureOptionName":"Metallic Bronze","manufactureOptionCode":"--","fabricTypes":[{"name":"FABRIC_TYPE_1","value":"premium
         leather"}]}]},{"category":"Exterior","options":[{"id":"200392016","name":"Morning
         Frost White","equipmentType":"COLOR","price":{"baseMSRP":5380.0,"estimateTmv":false},"manufactureOptionName":"Morning
-        Frost White","manufactureOptionCode":"--","colorChips":{"primary":{"r":220,"g":220,"b":220,"hex":"DCDCDC"}},"fabricTypes":[]}]},{"category":"Roof","options":[{"id":"200392019","name":"Black","equipmentType":"COLOR","manufactureOptionName":"Black","manufactureOptionCode":"--","colorChips":{"primary":{"r":25,"g":24,"b":29,"hex":"19181D"}},"fabricTypes":[]},{"id":"200392023","name":"Bitter
+        Frost White","manufactureOptionCode":"--","colorChips":{"primary":{"r":220,"g":220,"b":220,"hex":"DCDCDC"}},"fabricTypes":[]}]},{"category":"Roof","options":[{"id":"200392023","name":"Bitter
         Chocolate","equipmentType":"COLOR","price":{"baseMSRP":1020.0,"estimateTmv":false},"manufactureOptionName":"Bitter
-        Chocolate","manufactureOptionCode":"--","colorChips":{"primary":{"r":45,"g":25,"b":26,"hex":"2D191A"}},"fabricTypes":[]}]}],"manufacturerCode":"CVT","price":{"baseMSRP":211160.0,"deliveryCharges":2115.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"Exotic,High-Performance","EPAClass":"Mini
+        Chocolate","manufactureOptionCode":"--","colorChips":{"primary":{"r":45,"g":25,"b":26,"hex":"2D191A"}},"fabricTypes":[]},{"id":"200392019","name":"Black","equipmentType":"COLOR","manufactureOptionName":"Black","manufactureOptionCode":"--","colorChips":{"primary":{"r":25,"g":24,"b":29,"hex":"19181D"}},"fabricTypes":[]}]}],"manufacturerCode":"CVT","price":{"baseMSRP":211160.0,"deliveryCharges":2115.0,"estimateTmv":false,"tmvRecommendedRating":0},"categories":{"market":"Exotic,High-Performance","EPAClass":"Mini
         Compact Cars","vehicleSize":"Midsize","primaryBodyType":"Car","vehicleStyle":"Convertible","vehicleType":"Car"},"id":101404908,"name":"Volante
         Luxury Edition 2dr Convertible (5.9L 12cyl 6A)","year":{"id":100537350,"year":2012},"submodel":{"body":"Convertible","modelName":"DB9
         Convertible","niceName":"convertible"},"trim":"Volante Luxury Edition","states":["USED"],"squishVins":["SCFFDABECG"],"MPG":{"highway":"20","city":"13"}}'
     http_version: 
-  recorded_at: Sun, 08 Feb 2015 21:22:05 GMT
+  recorded_at: Tue, 17 Feb 2015 23:52:32 GMT
 recorded_with: VCR 2.9.3
